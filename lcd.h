@@ -1,7 +1,11 @@
 /************************************************************
- Biblioteca para LCD utilizando a placa PICGenios - PICSimLab
- Compilador XC8
- IDE: MPLAB X
+ * Biblioteca para LCD utilizando a placa PICGenios - PICSimLab
+ * Compilador XC8
+ * IDE: MPLAB X
+ * 
+ * Desenvolvido por: Marcos Mansano Furlan
+ * 
+ * Adaptado
  ***********************************************************/
 
 #ifndef LCD_H
@@ -37,7 +41,7 @@ void LCD_init()
    PORTEbits.RE2 = 1; //Finaliza a recepcao de comandos do LCD
 }
 
-void LCD_clearScreen()
+void LCD_clearScreen(void)
 {
    PORTEbits.RE2 = 0;
    PORTEbits.RE1 = 1;
@@ -102,10 +106,10 @@ void LCD_printFloatNumber(double number, int precision)
       LCD_printChar(48);
       LCD_printChar(46);
    }
-   while (/*numero>0 &&*/ aux < counter + precision) {
+   while (/* numero>0 && */ aux < counter + precision) {
       aux++;
       number *= 10;
-      digit = floor(number);
+      digit = (char)floor(number);
       number -= digit;
       LCD_printChar(48 + digit);
       if (aux == counter)

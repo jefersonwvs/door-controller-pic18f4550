@@ -45,66 +45,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "174 C:\Program Files\Microchip\xc8\v2.32\pic\include\c99\math.h
 [; ;C:\Program Files\Microchip\xc8\v2.32\pic\include\c99\math.h: 174: float floorf(float);
 [v _floorf `(f ~T0 @X0 0 ef1`f ]
-"7 main.c
-[; ;main.c: 7: DoorStatus doorStatus = 4;
+"85 ./util.h
+[; ;./util.h: 85: DoorStatus doorStatus = closed;
 [c E3805 1 2 3 4 .. ]
 [n E3805 status fire invasion opened closed  ]
-[p mainexit ]
-"79 ./util.h
-[v _ADC_init `(v ~T0 @X0 0 ef ]
-"77
-[v _interrupt_init `(v ~T0 @X0 0 ef ]
-"81
-[v _doorController_init `(v ~T0 @X0 0 ef ]
-"6672 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 6672:     struct {
-[s S273 :1 `uc 1 :1 `uc 1 ]
-[n S273 . . GO_NOT_DONE ]
-"6676
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 6676:     struct {
-[s S274 :1 `uc 1 :1 `uc 1 :4 `uc 1 ]
-[n S274 . ADON GO_nDONE CHS ]
-"6681
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 6681:     struct {
-[s S275 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S275 . . GO_DONE CHS0 CHS1 CHS2 CHS3 ]
-"6689
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 6689:     struct {
-[s S276 :1 `uc 1 :1 `uc 1 ]
-[n S276 . . DONE ]
-"6693
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 6693:     struct {
-[s S277 :1 `uc 1 :1 `uc 1 ]
-[n S277 . . GO ]
-"6697
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 6697:     struct {
-[s S278 :1 `uc 1 :1 `uc 1 ]
-[n S278 . . NOT_DONE ]
-"6701
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 6701:     struct {
-[s S279 :1 `uc 1 :1 `uc 1 ]
-[n S279 . . nDONE ]
-"6705
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 6705:     struct {
-[s S280 :1 `uc 1 :1 `uc 1 ]
-[n S280 . . GODONE ]
-"6671
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 6671: typedef union {
-[u S272 `S273 1 `S274 1 `S275 1 `S276 1 `S277 1 `S278 1 `S279 1 `S280 1 ]
-[n S272 . . . . . . . . . ]
-"6710
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 6710: extern volatile ADCON0bits_t ADCON0bits __attribute__((address(0xFC2)));
-[v _ADCON0bits `VS272 ~T0 @X0 0 e@4034 ]
-"6799
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 6799: extern volatile unsigned char ADRESH __attribute__((address(0xFC4)));
-[v _ADRESH `Vuc ~T0 @X0 0 e@4036 ]
-"6792
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 6792: extern volatile unsigned char ADRESL __attribute__((address(0xFC3)));
-[v _ADRESL `Vuc ~T0 @X0 0 e@4035 ]
-"82 ./util.h
-[v _doorController_openingDoor `(v ~T0 @X0 0 ef ]
-"83
-[v _doorController_closingDoor `(v ~T0 @X0 0 ef ]
 "7545 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 7545:     struct {
 [s S322 :1 `uc 1 ]
@@ -199,9 +143,17 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _INTCON2bits `VS355 ~T0 @X0 0 e@4081 ]
 [t ~ __interrupt . k ]
 [t T37 __interrupt high_priority ]
-"84 ./util.h
+"92 ./util.h
+[; ;./util.h: 92: void doorController_openingDoor(void);
+[v _doorController_openingDoor `(v ~T0 @X0 0 ef ]
+"94
+[; ;./util.h: 94: void doorController_fire(void);
 [v _doorController_fire `(v ~T0 @X0 0 ef ]
-"85
+"93
+[; ;./util.h: 93: void doorController_closingDoor(void);
+[v _doorController_closingDoor `(v ~T0 @X0 0 ef ]
+"95
+[; ;./util.h: 95: void doorController_invasion(void);
 [v _doorController_invasion `(v ~T0 @X0 0 ef ]
 "3438 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 3438:     struct {
@@ -227,6 +179,52 @@ Version 4.0 HI-TECH Software Intermediate Code
 "6510
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 6510: extern volatile unsigned char ADCON2 __attribute__((address(0xFC0)));
 [v _ADCON2 `Vuc ~T0 @X0 0 e@4032 ]
+"6672
+[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 6672:     struct {
+[s S273 :1 `uc 1 :1 `uc 1 ]
+[n S273 . . GO_NOT_DONE ]
+"6676
+[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 6676:     struct {
+[s S274 :1 `uc 1 :1 `uc 1 :4 `uc 1 ]
+[n S274 . ADON GO_nDONE CHS ]
+"6681
+[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 6681:     struct {
+[s S275 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S275 . . GO_DONE CHS0 CHS1 CHS2 CHS3 ]
+"6689
+[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 6689:     struct {
+[s S276 :1 `uc 1 :1 `uc 1 ]
+[n S276 . . DONE ]
+"6693
+[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 6693:     struct {
+[s S277 :1 `uc 1 :1 `uc 1 ]
+[n S277 . . GO ]
+"6697
+[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 6697:     struct {
+[s S278 :1 `uc 1 :1 `uc 1 ]
+[n S278 . . NOT_DONE ]
+"6701
+[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 6701:     struct {
+[s S279 :1 `uc 1 :1 `uc 1 ]
+[n S279 . . nDONE ]
+"6705
+[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 6705:     struct {
+[s S280 :1 `uc 1 :1 `uc 1 ]
+[n S280 . . GODONE ]
+"6671
+[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 6671: typedef union {
+[u S272 `S273 1 `S274 1 `S275 1 `S276 1 `S277 1 `S278 1 `S279 1 `S280 1 ]
+[n S272 . . . . . . . . . ]
+"6710
+[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 6710: extern volatile ADCON0bits_t ADCON0bits __attribute__((address(0xFC2)));
+[v _ADCON0bits `VS272 ~T0 @X0 0 e@4034 ]
+[p mainexit ]
+"6799
+[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 6799: extern volatile unsigned char ADRESH __attribute__((address(0xFC4)));
+[v _ADRESH `Vuc ~T0 @X0 0 e@4036 ]
+"6792
+[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 6792: extern volatile unsigned char ADRESL __attribute__((address(0xFC3)));
+[v _ADRESL `Vuc ~T0 @X0 0 e@4035 ]
 "54 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 54: __asm("SPPDATA equ 0F62h");
 [; <" SPPDATA equ 0F62h ;# ">
@@ -737,31 +735,107 @@ Version 4.0 HI-TECH Software Intermediate Code
 "8893
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 8893: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
-"13 ./lcd.h
-[; ;./lcd.h: 13: void LCD_init()
+"10 ./util.h
+[p x PLLDIV  =  1        ]
+"11
+[p x CPUDIV  =  OSC1_PLL2 ]
+"12
+[p x USBDIV  =  1        ]
+"15
+[p x FOSC  =  HS         ]
+"16
+[p x FCMEN  =  OFF       ]
+"17
+[p x IESO  =  OFF        ]
+"20
+[p x PWRT  =  OFF        ]
+"21
+[p x BOR  =  OFF         ]
+"22
+[p x BORV  =  3          ]
+"23
+[p x VREGEN  =  OFF      ]
+"26
+[p x WDT  =  ON         ]
+"27
+[p x WDTPS  =  8192     ]
+"30
+[p x CCP2MX  =  ON       ]
+"31
+[p x PBADEN  =  OFF      ]
+"32
+[p x LPT1OSC  =  OFF     ]
+"33
+[p x MCLRE  =  ON        ]
+"36
+[p x STVREN  =  OFF      ]
+"37
+[p x LVP  =  OFF         ]
+"38
+[p x ICPRT  =  OFF       ]
+"39
+[p x XINST  =  OFF       ]
+"42
+[p x CP0  =  OFF         ]
+"43
+[p x CP1  =  OFF         ]
+"44
+[p x CP2  =  OFF         ]
+"45
+[p x CP3  =  OFF         ]
+"48
+[p x CPB  =  OFF         ]
+"49
+[p x CPD  =  OFF         ]
+"52
+[p x WRT0  =  OFF        ]
+"53
+[p x WRT1  =  OFF        ]
+"54
+[p x WRT2  =  OFF        ]
+"55
+[p x WRT3  =  OFF        ]
+"58
+[p x WRTC  =  OFF        ]
+"59
+[p x WRTB  =  OFF        ]
+"60
+[p x WRTD  =  OFF        ]
+"63
+[p x EBTR0  =  OFF       ]
+"64
+[p x EBTR1  =  OFF       ]
+"65
+[p x EBTR2  =  OFF       ]
+"66
+[p x EBTR3  =  OFF       ]
+"69
+[p x EBTRB  =  OFF       ]
+"17 ./lcd.h
+[; ;./lcd.h: 17: void LCD_init()
 [v _LCD_init `(v ~T0 @X0 1 ef ]
-"14
-[; ;./lcd.h: 14: {
+"18
+[; ;./lcd.h: 18: {
 {
 [e :U _LCD_init ]
 [f ]
-"15
-[; ;./lcd.h: 15:    TRISD = 0b00000000;
-[e = _TRISD -> -> 0 `i `uc ]
-"16
-[; ;./lcd.h: 16:    TRISE = 0b00000000;
-[e = _TRISE -> -> 0 `i `uc ]
-"18
-[; ;./lcd.h: 18:    PORTEbits.RE2 = 0;
-[e = . . _PORTEbits 0 2 -> -> 0 `i `uc ]
 "19
-[; ;./lcd.h: 19:    int i;
+[; ;./lcd.h: 19:    TRISD = 0b00000000;
+[e = _TRISD -> -> 0 `i `uc ]
+"20
+[; ;./lcd.h: 20:    TRISE = 0b00000000;
+[e = _TRISE -> -> 0 `i `uc ]
+"22
+[; ;./lcd.h: 22:    PORTEbits.RE2 = 0;
+[e = . . _PORTEbits 0 2 -> -> 0 `i `uc ]
+"23
+[; ;./lcd.h: 23:    int i;
 [v _i `i ~T0 @X0 1 a ]
 [v F3785 `uc ~T0 @X0 -> 7 `i s ]
 [i F3785
 :U ..
-"20
-[; ;./lcd.h: 20:    char config[7] = {
+"24
+[; ;./lcd.h: 24:    char config[7] = {
 -> -> 48 `i `uc
 -> -> 48 `i `uc
 -> -> 48 `i `uc
@@ -773,909 +847,858 @@ Version 4.0 HI-TECH Software Intermediate Code
 ]
 [v _config `uc ~T0 @X0 -> 7 `i a ]
 [e = _config F3785 ]
-"30
-[; ;./lcd.h: 30:    for (i = 0; i < 7; i++) {
+"34
+[; ;./lcd.h: 34:    for (i = 0; i < 7; i++) {
 {
 [e = _i -> 0 `i ]
 [e $ < _i -> 7 `i 369  ]
 [e $U 370  ]
 [e :U 369 ]
 {
-"31
-[; ;./lcd.h: 31:       PORTEbits.RE1 = 1;
-[e = . . _PORTEbits 0 1 -> -> 1 `i `uc ]
-"32
-[; ;./lcd.h: 32:       PORTD = config[i];
-[e = _PORTD -> *U + &U _config * -> -> _i `ui `ux -> -> # *U &U _config `ui `ux `uc ]
-"33
-[; ;./lcd.h: 33:       _delay((unsigned long)((50)*(4000000/4000000.0)));
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
-"34
-[; ;./lcd.h: 34:       PORTEbits.RE1 = 0;
-[e = . . _PORTEbits 0 1 -> -> 0 `i `uc ]
 "35
-[; ;./lcd.h: 35:       _delay((unsigned long)((50)*(4000000/4000000.0)));
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+[; ;./lcd.h: 35:       PORTEbits.RE1 = 1;
+[e = . . _PORTEbits 0 1 -> -> 1 `i `uc ]
 "36
-[; ;./lcd.h: 36:    }
+[; ;./lcd.h: 36:       PORTD = config[i];
+[e = _PORTD -> *U + &U _config * -> -> _i `ui `ux -> -> # *U &U _config `ui `ux `uc ]
+"37
+[; ;./lcd.h: 37:       _delay((unsigned long)((50)*(4000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+"38
+[; ;./lcd.h: 38:       PORTEbits.RE1 = 0;
+[e = . . _PORTEbits 0 1 -> -> 0 `i `uc ]
+"39
+[; ;./lcd.h: 39:       _delay((unsigned long)((50)*(4000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+"40
+[; ;./lcd.h: 40:    }
 }
 [e ++ _i -> 1 `i ]
 [e $ < _i -> 7 `i 369  ]
 [e :U 370 ]
 }
-"37
-[; ;./lcd.h: 37:    PORTEbits.RE2 = 1;
+"41
+[; ;./lcd.h: 41:    PORTEbits.RE2 = 1;
 [e = . . _PORTEbits 0 2 -> -> 1 `i `uc ]
-"38
-[; ;./lcd.h: 38: }
+"42
+[; ;./lcd.h: 42: }
 [e :UE 368 ]
 }
-"40
-[; ;./lcd.h: 40: void LCD_clearScreen()
+"44
+[; ;./lcd.h: 44: void LCD_clearScreen(void)
 [v _LCD_clearScreen `(v ~T0 @X0 1 ef ]
-"41
-[; ;./lcd.h: 41: {
+"45
+[; ;./lcd.h: 45: {
 {
 [e :U _LCD_clearScreen ]
 [f ]
-"42
-[; ;./lcd.h: 42:    PORTEbits.RE2 = 0;
-[e = . . _PORTEbits 0 2 -> -> 0 `i `uc ]
-"43
-[; ;./lcd.h: 43:    PORTEbits.RE1 = 1;
-[e = . . _PORTEbits 0 1 -> -> 1 `i `uc ]
-"44
-[; ;./lcd.h: 44:    PORTD = 0x01;
-[e = _PORTD -> -> 1 `i `uc ]
-"45
-[; ;./lcd.h: 45:    _delay((unsigned long)((50)*(4000000/4000000.0)));
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
 "46
-[; ;./lcd.h: 46:    PORTEbits.RE1 = 0;
-[e = . . _PORTEbits 0 1 -> -> 0 `i `uc ]
+[; ;./lcd.h: 46:    PORTEbits.RE2 = 0;
+[e = . . _PORTEbits 0 2 -> -> 0 `i `uc ]
 "47
-[; ;./lcd.h: 47:    _delay((unsigned long)((50)*(4000000/4000000.0)));
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+[; ;./lcd.h: 47:    PORTEbits.RE1 = 1;
+[e = . . _PORTEbits 0 1 -> -> 1 `i `uc ]
 "48
-[; ;./lcd.h: 48:    PORTEbits.RE2 = 1;
-[e = . . _PORTEbits 0 2 -> -> 1 `i `uc ]
+[; ;./lcd.h: 48:    PORTD = 0x01;
+[e = _PORTD -> -> 1 `i `uc ]
 "49
-[; ;./lcd.h: 49: }
+[; ;./lcd.h: 49:    _delay((unsigned long)((50)*(4000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+"50
+[; ;./lcd.h: 50:    PORTEbits.RE1 = 0;
+[e = . . _PORTEbits 0 1 -> -> 0 `i `uc ]
+"51
+[; ;./lcd.h: 51:    _delay((unsigned long)((50)*(4000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+"52
+[; ;./lcd.h: 52:    PORTEbits.RE2 = 1;
+[e = . . _PORTEbits 0 2 -> -> 1 `i `uc ]
+"53
+[; ;./lcd.h: 53: }
 [e :UE 372 ]
 }
-"51
-[; ;./lcd.h: 51: void LCD_placeCursorInPosition(char position)
+"55
+[; ;./lcd.h: 55: void LCD_placeCursorInPosition(char position)
 [v _LCD_placeCursorInPosition `(v ~T0 @X0 1 ef1`uc ]
-"52
-[; ;./lcd.h: 52: {
+"56
+[; ;./lcd.h: 56: {
 {
 [e :U _LCD_placeCursorInPosition ]
-"51
-[; ;./lcd.h: 51: void LCD_placeCursorInPosition(char position)
-[v _position `uc ~T0 @X0 1 r1 ]
-"52
-[; ;./lcd.h: 52: {
-[f ]
-"53
-[; ;./lcd.h: 53:    PORTEbits.RE2 = 0;
-[e = . . _PORTEbits 0 2 -> -> 0 `i `uc ]
-"54
-[; ;./lcd.h: 54:    PORTEbits.RE1 = 1;
-[e = . . _PORTEbits 0 1 -> -> 1 `i `uc ]
 "55
-[; ;./lcd.h: 55:    PORTD = position;
-[e = _PORTD -> _position `uc ]
+[; ;./lcd.h: 55: void LCD_placeCursorInPosition(char position)
+[v _position `uc ~T0 @X0 1 r1 ]
 "56
-[; ;./lcd.h: 56:    _delay((unsigned long)((50)*(4000000/4000000.0)));
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+[; ;./lcd.h: 56: {
+[f ]
 "57
-[; ;./lcd.h: 57:    PORTEbits.RE1 = 0;
-[e = . . _PORTEbits 0 1 -> -> 0 `i `uc ]
+[; ;./lcd.h: 57:    PORTEbits.RE2 = 0;
+[e = . . _PORTEbits 0 2 -> -> 0 `i `uc ]
 "58
-[; ;./lcd.h: 58:    _delay((unsigned long)((50)*(4000000/4000000.0)));
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+[; ;./lcd.h: 58:    PORTEbits.RE1 = 1;
+[e = . . _PORTEbits 0 1 -> -> 1 `i `uc ]
 "59
-[; ;./lcd.h: 59:    PORTEbits.RE2 = 1;
-[e = . . _PORTEbits 0 2 -> -> 1 `i `uc ]
+[; ;./lcd.h: 59:    PORTD = position;
+[e = _PORTD -> _position `uc ]
 "60
-[; ;./lcd.h: 60: }
+[; ;./lcd.h: 60:    _delay((unsigned long)((50)*(4000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+"61
+[; ;./lcd.h: 61:    PORTEbits.RE1 = 0;
+[e = . . _PORTEbits 0 1 -> -> 0 `i `uc ]
+"62
+[; ;./lcd.h: 62:    _delay((unsigned long)((50)*(4000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+"63
+[; ;./lcd.h: 63:    PORTEbits.RE2 = 1;
+[e = . . _PORTEbits 0 2 -> -> 1 `i `uc ]
+"64
+[; ;./lcd.h: 64: }
 [e :UE 373 ]
 }
-"62
-[; ;./lcd.h: 62: void LCD_customDelay_ms(long ms)
+"66
+[; ;./lcd.h: 66: void LCD_customDelay_ms(long ms)
 [v _LCD_customDelay_ms `(v ~T0 @X0 1 ef1`l ]
-"63
-[; ;./lcd.h: 63: {
+"67
+[; ;./lcd.h: 67: {
 {
 [e :U _LCD_customDelay_ms ]
-"62
-[; ;./lcd.h: 62: void LCD_customDelay_ms(long ms)
+"66
+[; ;./lcd.h: 66: void LCD_customDelay_ms(long ms)
 [v _ms `l ~T0 @X0 1 r1 ]
-"63
-[; ;./lcd.h: 63: {
+"67
+[; ;./lcd.h: 67: {
 [f ]
-"64
-[; ;./lcd.h: 64:    while (ms--) {
+"68
+[; ;./lcd.h: 68:    while (ms--) {
 [e $U 375  ]
 [e :U 376 ]
 {
-"65
-[; ;./lcd.h: 65:       _delay((unsigned long)((1)*(4000000/4000.0)));
+"69
+[; ;./lcd.h: 69:       _delay((unsigned long)((1)*(4000000/4000.0)));
 [e ( __delay (1 -> * -> -> 1 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"66
-[; ;./lcd.h: 66:    }
+"70
+[; ;./lcd.h: 70:    }
 }
 [e :U 375 ]
-"64
-[; ;./lcd.h: 64:    while (ms--) {
+"68
+[; ;./lcd.h: 68:    while (ms--) {
 [e $ != -- _ms -> -> 1 `i `l -> -> 0 `i `l 376  ]
 [e :U 377 ]
-"67
-[; ;./lcd.h: 67: }
+"71
+[; ;./lcd.h: 71: }
 [e :UE 374 ]
 }
-"69
-[; ;./lcd.h: 69: void LCD_print(char text[], long delay)
+"73
+[; ;./lcd.h: 73: void LCD_print(char text[], long delay)
 [v _LCD_print `(v ~T0 @X0 1 ef2`*uc`l ]
-"70
-[; ;./lcd.h: 70: {
+"74
+[; ;./lcd.h: 74: {
 {
 [e :U _LCD_print ]
-"69
-[; ;./lcd.h: 69: void LCD_print(char text[], long delay)
+"73
+[; ;./lcd.h: 73: void LCD_print(char text[], long delay)
 [v _text `*uc ~T0 @X0 1 r1 ]
 [v _delay `l ~T0 @X0 1 r2 ]
-"70
-[; ;./lcd.h: 70: {
+"74
+[; ;./lcd.h: 74: {
 [f ]
-"71
-[; ;./lcd.h: 71:    int i, length;
+"75
+[; ;./lcd.h: 75:    int i, length;
 [v _i `i ~T0 @X0 1 a ]
 [v _length `i ~T0 @X0 1 a ]
-"72
-[; ;./lcd.h: 72:    length = (int) strlen(text);
+"76
+[; ;./lcd.h: 76:    length = (int) strlen(text);
 [e = _length -> ( _strlen (1 -> _text `*Cuc `i ]
-"73
-[; ;./lcd.h: 73:    for (i = 0; i < length; i++) {
+"77
+[; ;./lcd.h: 77:    for (i = 0; i < length; i++) {
 {
 [e = _i -> 0 `i ]
 [e $U 382  ]
 [e :U 379 ]
 {
-"74
-[; ;./lcd.h: 74:       PORTEbits.RE1 = 1;
-[e = . . _PORTEbits 0 1 -> -> 1 `i `uc ]
-"75
-[; ;./lcd.h: 75:       PORTD = text[i];
-[e = _PORTD -> *U + _text * -> _i `x -> -> # *U _text `i `x `uc ]
-"76
-[; ;./lcd.h: 76:       LCD_customDelay_ms(delay);
-[e ( _LCD_customDelay_ms (1 _delay ]
 "78
-[; ;./lcd.h: 78:       PORTEbits.RE1 = 0;
-[e = . . _PORTEbits 0 1 -> -> 0 `i `uc ]
+[; ;./lcd.h: 78:       PORTEbits.RE1 = 1;
+[e = . . _PORTEbits 0 1 -> -> 1 `i `uc ]
 "79
-[; ;./lcd.h: 79:       _delay((unsigned long)((50)*(4000000/4000000.0)));
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+[; ;./lcd.h: 79:       PORTD = text[i];
+[e = _PORTD -> *U + _text * -> _i `x -> -> # *U _text `i `x `uc ]
 "80
-[; ;./lcd.h: 80:    }
+[; ;./lcd.h: 80:       LCD_customDelay_ms(delay);
+[e ( _LCD_customDelay_ms (1 _delay ]
+"82
+[; ;./lcd.h: 82:       PORTEbits.RE1 = 0;
+[e = . . _PORTEbits 0 1 -> -> 0 `i `uc ]
+"83
+[; ;./lcd.h: 83:       _delay((unsigned long)((50)*(4000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+"84
+[; ;./lcd.h: 84:    }
 }
 [e ++ _i -> 1 `i ]
 [e :U 382 ]
 [e $ < _i _length 379  ]
 [e :U 380 ]
 }
-"81
-[; ;./lcd.h: 81: }
+"85
+[; ;./lcd.h: 85: }
 [e :UE 378 ]
 }
-"83
-[; ;./lcd.h: 83: void LCD_printChar(char letter)
+"87
+[; ;./lcd.h: 87: void LCD_printChar(char letter)
 [v _LCD_printChar `(v ~T0 @X0 1 ef1`uc ]
-"84
-[; ;./lcd.h: 84: {
+"88
+[; ;./lcd.h: 88: {
 {
 [e :U _LCD_printChar ]
-"83
-[; ;./lcd.h: 83: void LCD_printChar(char letter)
-[v _letter `uc ~T0 @X0 1 r1 ]
-"84
-[; ;./lcd.h: 84: {
-[f ]
-"85
-[; ;./lcd.h: 85:    PORTEbits.RE1 = 1;
-[e = . . _PORTEbits 0 1 -> -> 1 `i `uc ]
-"86
-[; ;./lcd.h: 86:    PORTD = letter;
-[e = _PORTD -> _letter `uc ]
 "87
-[; ;./lcd.h: 87:    _delay((unsigned long)((50)*(4000000/4000000.0)));
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+[; ;./lcd.h: 87: void LCD_printChar(char letter)
+[v _letter `uc ~T0 @X0 1 r1 ]
 "88
-[; ;./lcd.h: 88:    PORTEbits.RE1 = 0;
-[e = . . _PORTEbits 0 1 -> -> 0 `i `uc ]
+[; ;./lcd.h: 88: {
+[f ]
 "89
-[; ;./lcd.h: 89:    _delay((unsigned long)((50)*(4000000/4000000.0)));
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+[; ;./lcd.h: 89:    PORTEbits.RE1 = 1;
+[e = . . _PORTEbits 0 1 -> -> 1 `i `uc ]
 "90
-[; ;./lcd.h: 90: }
+[; ;./lcd.h: 90:    PORTD = letter;
+[e = _PORTD -> _letter `uc ]
+"91
+[; ;./lcd.h: 91:    _delay((unsigned long)((50)*(4000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+"92
+[; ;./lcd.h: 92:    PORTEbits.RE1 = 0;
+[e = . . _PORTEbits 0 1 -> -> 0 `i `uc ]
+"93
+[; ;./lcd.h: 93:    _delay((unsigned long)((50)*(4000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+"94
+[; ;./lcd.h: 94: }
 [e :UE 383 ]
 }
-"92
-[; ;./lcd.h: 92: void LCD_printFloatNumber(double number, int precision)
+"96
+[; ;./lcd.h: 96: void LCD_printFloatNumber(double number, int precision)
 [v _LCD_printFloatNumber `(v ~T0 @X0 1 ef2`d`i ]
-"93
-[; ;./lcd.h: 93: {
+"97
+[; ;./lcd.h: 97: {
 {
 [e :U _LCD_printFloatNumber ]
-"92
-[; ;./lcd.h: 92: void LCD_printFloatNumber(double number, int precision)
+"96
+[; ;./lcd.h: 96: void LCD_printFloatNumber(double number, int precision)
 [v _number `d ~T0 @X0 1 r1 ]
 [v _precision `i ~T0 @X0 1 r2 ]
-"93
-[; ;./lcd.h: 93: {
+"97
+[; ;./lcd.h: 97: {
 [f ]
-"94
-[; ;./lcd.h: 94:    char digit, counter, aux;
+"98
+[; ;./lcd.h: 98:    char digit, counter, aux;
 [v _digit `uc ~T0 @X0 1 a ]
 [v _counter `uc ~T0 @X0 1 a ]
 [v _aux `uc ~T0 @X0 1 a ]
-"95
-[; ;./lcd.h: 95:    counter = 0;
+"99
+[; ;./lcd.h: 99:    counter = 0;
 [e = _counter -> -> 0 `i `uc ]
-"96
-[; ;./lcd.h: 96:    aux = 0;
+"100
+[; ;./lcd.h: 100:    aux = 0;
 [e = _aux -> -> 0 `i `uc ]
-"97
-[; ;./lcd.h: 97:    while (number >= 1) {
+"101
+[; ;./lcd.h: 101:    while (number >= 1) {
 [e $U 385  ]
 [e :U 386 ]
 {
-"98
-[; ;./lcd.h: 98:       number /= 10;
-[e =/ _number -> -> 10 `i `d ]
-"99
-[; ;./lcd.h: 99:       counter++;
-[e ++ _counter -> -> 1 `i `uc ]
-"100
-[; ;./lcd.h: 100:    }
-}
-[e :U 385 ]
-"97
-[; ;./lcd.h: 97:    while (number >= 1) {
-[e $ >= _number -> -> 1 `i `d 386  ]
-[e :U 387 ]
-"101
-[; ;./lcd.h: 101:    if (counter == 0) {
-[e $ ! == -> _counter `i -> 0 `i 388  ]
-{
 "102
-[; ;./lcd.h: 102:       LCD_printChar(48);
-[e ( _LCD_printChar (1 -> -> 48 `i `uc ]
+[; ;./lcd.h: 102:       number /= 10;
+[e =/ _number -> -> 10 `i `d ]
 "103
-[; ;./lcd.h: 103:       LCD_printChar(46);
-[e ( _LCD_printChar (1 -> -> 46 `i `uc ]
+[; ;./lcd.h: 103:       counter++;
+[e ++ _counter -> -> 1 `i `uc ]
 "104
 [; ;./lcd.h: 104:    }
 }
-[e :U 388 ]
+[e :U 385 ]
+"101
+[; ;./lcd.h: 101:    while (number >= 1) {
+[e $ >= _number -> -> 1 `i `d 386  ]
+[e :U 387 ]
 "105
-[; ;./lcd.h: 105:    while ( aux < counter + precision) {
+[; ;./lcd.h: 105:    if (counter == 0) {
+[e $ ! == -> _counter `i -> 0 `i 388  ]
+{
+"106
+[; ;./lcd.h: 106:       LCD_printChar(48);
+[e ( _LCD_printChar (1 -> -> 48 `i `uc ]
+"107
+[; ;./lcd.h: 107:       LCD_printChar(46);
+[e ( _LCD_printChar (1 -> -> 46 `i `uc ]
+"108
+[; ;./lcd.h: 108:    }
+}
+[e :U 388 ]
+"109
+[; ;./lcd.h: 109:    while ( aux < counter + precision) {
 [e $U 389  ]
 [e :U 390 ]
 {
-"106
-[; ;./lcd.h: 106:       aux++;
-[e ++ _aux -> -> 1 `i `uc ]
-"107
-[; ;./lcd.h: 107:       number *= 10;
-[e =* _number -> -> 10 `i `d ]
-"108
-[; ;./lcd.h: 108:       digit = floorf(number);
-[e = _digit -> ( _floorf (1 -> _number `f `uc ]
-"109
-[; ;./lcd.h: 109:       number -= digit;
-[e =- _number -> -> _digit `i `d ]
 "110
-[; ;./lcd.h: 110:       LCD_printChar(48 + digit);
-[e ( _LCD_printChar (1 -> + -> 48 `i -> _digit `i `uc ]
+[; ;./lcd.h: 110:       aux++;
+[e ++ _aux -> -> 1 `i `uc ]
 "111
-[; ;./lcd.h: 111:       if (aux == counter)
-[e $ ! == -> _aux `i -> _counter `i 392  ]
+[; ;./lcd.h: 111:       number *= 10;
+[e =* _number -> -> 10 `i `d ]
 "112
-[; ;./lcd.h: 112:          LCD_printChar(46);
+[; ;./lcd.h: 112:       digit = (char)floorf(number);
+[e = _digit -> ( _floorf (1 -> _number `f `uc ]
+"113
+[; ;./lcd.h: 113:       number -= digit;
+[e =- _number -> -> _digit `i `d ]
+"114
+[; ;./lcd.h: 114:       LCD_printChar(48 + digit);
+[e ( _LCD_printChar (1 -> + -> 48 `i -> _digit `i `uc ]
+"115
+[; ;./lcd.h: 115:       if (aux == counter)
+[e $ ! == -> _aux `i -> _counter `i 392  ]
+"116
+[; ;./lcd.h: 116:          LCD_printChar(46);
 [e ( _LCD_printChar (1 -> -> 46 `i `uc ]
 [e :U 392 ]
-"113
-[; ;./lcd.h: 113:    }
+"117
+[; ;./lcd.h: 117:    }
 }
 [e :U 389 ]
-"105
-[; ;./lcd.h: 105:    while ( aux < counter + precision) {
+"109
+[; ;./lcd.h: 109:    while ( aux < counter + precision) {
 [e $ < -> _aux `i + -> _counter `i _precision 390  ]
 [e :U 391 ]
-"114
-[; ;./lcd.h: 114: }
+"118
+[; ;./lcd.h: 118: }
 [e :UE 384 ]
 }
-"6 ./util.h
-[; ;./util.h: 6:    opened = 3,
-[p x PLLDIV  =  1        ]
-"7
-[; ;./util.h: 7:    closed = 4
-[p x CPUDIV  =  OSC1_PLL2 ]
-"8
-[; ;./util.h: 8: } DoorStatus;
-[p x USBDIV  =  1        ]
-"11
-[; ;./util.h: 11: void __attribute__((picinterrupt(("high_priority")))) interrupt_service_routine(void);
-[p x FOSC  =  HS         ]
-"12
-[; ;./util.h: 12: void ADC_init(void);
-[p x FCMEN  =  OFF       ]
-"13
-[; ;./util.h: 13: 
-[p x IESO  =  OFF        ]
-"16
-[; ;./util.h: 16: void doorController_closingDoor(void);
-[p x PWRT  =  OFF        ]
-"17
-[; ;./util.h: 17: void doorController_fire(void);
-[p x BOR  =  OFF         ]
-"18
-[; ;./util.h: 18: void doorController_invasion(void);
-[p x BORV  =  3          ]
-"19
-[p x VREGEN  =  OFF      ]
-"22
-[p x WDT  =  OFF         ]
-"23
-[p x WDTPS  =  32768     ]
-"26
-[p x CCP2MX  =  ON       ]
-"27
-[p x PBADEN  =  OFF      ]
-"28
-[p x LPT1OSC  =  OFF     ]
-"29
-[p x MCLRE  =  ON        ]
-"32
-[p x STVREN  =  OFF      ]
-"33
-[p x LVP  =  OFF         ]
-"34
-[p x ICPRT  =  OFF       ]
-"35
-[p x XINST  =  OFF       ]
-"38
-[p x CP0  =  OFF         ]
-"39
-[p x CP1  =  OFF         ]
-"40
-[p x CP2  =  OFF         ]
-"41
-[p x CP3  =  OFF         ]
-"44
-[p x CPB  =  OFF         ]
-"45
-[p x CPD  =  OFF         ]
-"48
-[p x WRT0  =  OFF        ]
-"49
-[p x WRT1  =  OFF        ]
-"50
-[p x WRT2  =  OFF        ]
-"51
-[p x WRT3  =  OFF        ]
-"54
-[p x WRTC  =  OFF        ]
-"55
-[p x WRTB  =  OFF        ]
-"56
-[p x WRTD  =  OFF        ]
-"59
-[p x EBTR0  =  OFF       ]
-"60
-[p x EBTR1  =  OFF       ]
-"61
-[p x EBTR2  =  OFF       ]
-"62
-[p x EBTR3  =  OFF       ]
-"65
-[p x EBTRB  =  OFF       ]
-"7 main.c
-[; ;main.c: 7: DoorStatus doorStatus = 4;
+"85 ./util.h
+[; ;./util.h: 85: DoorStatus doorStatus = closed;
 [v _doorStatus `E3805 ~T0 @X0 1 e ]
 [i _doorStatus
--> -> 4 `i `E3805
+. `E3805 3
 ]
-[v $root$_main `(v ~T0 @X0 0 e ]
-"9
-[; ;main.c: 9: void main(void)
-[v _main `(v ~T0 @X0 1 ef ]
-"10
-[; ;main.c: 10: {
-{
-[e :U _main ]
-[f ]
-"11
-[; ;main.c: 11:  LCD_init();
-[e ( _LCD_init ..  ]
-"12
-[; ;main.c: 12:  ADC_init();
-[e ( _ADC_init ..  ]
-"13
-[; ;main.c: 13:  interrupt_init();
-[e ( _interrupt_init ..  ]
-"15
-[; ;main.c: 15:  doorController_init();
-[e ( _doorController_init ..  ]
-"17
-[; ;main.c: 17:  double value = 0.0;
-[v _value `d ~T0 @X0 1 a ]
-[e = _value .0.0 ]
-"18
-[; ;main.c: 18:  double previousValue = 0.0;
-[v _previousValue `d ~T0 @X0 1 a ]
-[e = _previousValue .0.0 ]
-"20
-[; ;main.c: 20:  double distance = 0.0;
-[v _distance `d ~T0 @X0 1 a ]
-[e = _distance .0.0 ]
-"22
-[; ;main.c: 22:  while (1)
-[e :U 395 ]
-"23
-[; ;main.c: 23:  {
-{
-"24
-[; ;main.c: 24:   if (doorStatus != fire && doorStatus != invasion) {
-[e $ ! && != -> _doorStatus `ui -> . `E3805 0 `ui != -> _doorStatus `ui -> . `E3805 1 `ui 397  ]
-{
-"26
-[; ;main.c: 26:    ADCON0bits.GO = 1;
-[e = . . _ADCON0bits 4 1 -> -> 1 `i `uc ]
-"27
-[; ;main.c: 27:    while (!ADCON0bits.DONE);
-[e $U 398  ]
-[e :U 399 ]
-[e :U 398 ]
-[e $ ! != -> . . _ADCON0bits 3 1 `i -> 0 `i 399  ]
-[e :U 400 ]
-"28
-[; ;main.c: 28:    value = (5.0) * ((ADRESH<<8) + ADRESL) / 1023;
-[e = _value / * .5.0 -> + << -> _ADRESH `i -> 8 `i -> _ADRESL `i `d -> -> 1023 `i `d ]
-"30
-[; ;main.c: 30:    if (value != previousValue) {
-[e $ ! != _value _previousValue 401  ]
-{
-"32
-[; ;main.c: 32:     distance = 5.0 - value;
-[e = _distance - .5.0 _value ]
-"34
-[; ;main.c: 34:     if (distance <= 2.0) {
-[e $ ! <= _distance .2.0 402  ]
-{
-"36
-[; ;main.c: 36:      doorController_openingDoor();
-[e ( _doorController_openingDoor ..  ]
-"37
-[; ;main.c: 37:     } else {
-}
-[e $U 403  ]
-[e :U 402 ]
-{
-"39
-[; ;main.c: 39:      doorController_closingDoor();
-[e ( _doorController_closingDoor ..  ]
-"40
-[; ;main.c: 40:     }
-}
-[e :U 403 ]
-"43
-[; ;main.c: 43:     LCD_placeCursorInPosition(0xD1);
-[e ( _LCD_placeCursorInPosition (1 -> -> 209 `i `uc ]
-"44
-[; ;main.c: 44:     LCD_printFloatNumber(value, 2);
-[e ( _LCD_printFloatNumber (2 , _value -> 2 `i ]
-"45
-[; ;main.c: 45:     previousValue = value;
-[e = _previousValue _value ]
-"46
-[; ;main.c: 46:    }
-}
-[e :U 401 ]
-"47
-[; ;main.c: 47:   }
-}
-[e :U 397 ]
-"49
-[; ;main.c: 49:  }
-}
-[e :U 394 ]
-[e $U 395  ]
-[e :U 396 ]
-"51
-[; ;main.c: 51:  return;
-[e $UE 393  ]
-"52
-[; ;main.c: 52: }
-[e :UE 393 ]
-}
-"57
-[; ;main.c: 57: void interrupt_init(void)
+"100
+[; ;./util.h: 100: void interrupt_init(void)
 [v _interrupt_init `(v ~T0 @X0 1 ef ]
-"58
-[; ;main.c: 58: {
+"101
+[; ;./util.h: 101: {
 {
 [e :U _interrupt_init ]
 [f ]
-"60
-[; ;main.c: 60:  RCONbits.IPEN = 1;
+"103
+[; ;./util.h: 103:    RCONbits.IPEN = 1;
 [e = . . _RCONbits 5 7 -> -> 1 `i `uc ]
-"63
-[; ;main.c: 63:  INTCONbits.GIEH = 1;
+"106
+[; ;./util.h: 106:    INTCONbits.GIEH = 1;
 [e = . . _INTCONbits 2 2 -> -> 1 `i `uc ]
-"64
-[; ;main.c: 64:  INTCONbits.GIEL = 0;
+"107
+[; ;./util.h: 107:    INTCONbits.GIEL = 0;
 [e = . . _INTCONbits 2 1 -> -> 0 `i `uc ]
-"66
-[; ;main.c: 66:  INTCON3bits.INT1F = 0;
+"109
+[; ;./util.h: 109:    INTCON3bits.INT1F = 0;
 [e = . . _INTCON3bits 1 0 -> -> 0 `i `uc ]
-"67
-[; ;main.c: 67:  INTCON3bits.INT1IP = 1;
+"110
+[; ;./util.h: 110:    INTCON3bits.INT1IP = 1;
 [e = . . _INTCON3bits 0 6 -> -> 1 `i `uc ]
-"68
-[; ;main.c: 68:  INTCON2bits.INTEDG1 = 0;
+"111
+[; ;./util.h: 111:    INTCON2bits.INTEDG1 = 0;
 [e = . . _INTCON2bits 1 5 -> -> 0 `i `uc ]
-"69
-[; ;main.c: 69:  INTCON3bits.INT1IE = 1;
+"112
+[; ;./util.h: 112:    INTCON3bits.INT1IE = 1;
 [e = . . _INTCON3bits 0 3 -> -> 1 `i `uc ]
-"71
-[; ;main.c: 71:  INTCON3bits.INT2IF = 0;
+"114
+[; ;./util.h: 114:    INTCON3bits.INT2IF = 0;
 [e = . . _INTCON3bits 0 1 -> -> 0 `i `uc ]
-"72
-[; ;main.c: 72:  INTCON3bits.INT2IP = 1;
+"115
+[; ;./util.h: 115:    INTCON3bits.INT2IP = 1;
 [e = . . _INTCON3bits 0 7 -> -> 1 `i `uc ]
-"73
-[; ;main.c: 73:  INTCON2bits.INTEDG2 = 0;
+"116
+[; ;./util.h: 116:    INTCON2bits.INTEDG2 = 0;
 [e = . . _INTCON2bits 1 4 -> -> 0 `i `uc ]
-"74
-[; ;main.c: 74:  INTCON3bits.INT2IE = 1;
+"117
+[; ;./util.h: 117:    INTCON3bits.INT2IE = 1;
 [e = . . _INTCON3bits 0 4 -> -> 1 `i `uc ]
-"76
-[; ;main.c: 76: }
-[e :UE 404 ]
+"118
+[; ;./util.h: 118: }
+[e :UE 393 ]
 }
 [v $root$_interrupt_service_routine `(v ~T0 @X0 0 e ]
-"81
-[; ;main.c: 81: void __attribute__((picinterrupt(("high_priority")))) interrupt_service_routine(void)
+"123
+[; ;./util.h: 123: void __attribute__((picinterrupt(("high_priority")))) interrupt_service_routine(void)
 [v _interrupt_service_routine `(v ~T37 @X0 1 ef ]
-"82
-[; ;main.c: 82: {
+"124
+[; ;./util.h: 124: {
 {
 [e :U _interrupt_service_routine ]
 [f ]
-"83
-[; ;main.c: 83:  if (INTCON3bits.INT1IE && INTCON3bits.INT1IF) {
-[e $ ! && != -> . . _INTCON3bits 0 3 `i -> 0 `i != -> . . _INTCON3bits 0 0 `i -> 0 `i 406  ]
+"125
+[; ;./util.h: 125:    if (INTCON3bits.INT1IE && INTCON3bits.INT1IF) {
+[e $ ! && != -> . . _INTCON3bits 0 3 `i -> 0 `i != -> . . _INTCON3bits 0 0 `i -> 0 `i 395  ]
 {
-"85
-[; ;main.c: 85:   switch (doorStatus) {
-[e $U 408  ]
+"127
+[; ;./util.h: 127:       switch (doorStatus) {
+[e $U 397  ]
 {
-"86
-[; ;main.c: 86:    case closed:
-[e :U 409 ]
-"87
-[; ;main.c: 87:    case invasion: doorController_openingDoor();
-[e :U 410 ]
+"128
+[; ;./util.h: 128:          case closed:
+[e :U 398 ]
+"129
+[; ;./util.h: 129:          case invasion: doorController_openingDoor();
+[e :U 399 ]
 [e ( _doorController_openingDoor ..  ]
-"88
-[; ;main.c: 88:    case opened: doorController_fire(); break;
-[e :U 411 ]
+"130
+[; ;./util.h: 130:          case opened: doorController_fire(); break;
+[e :U 400 ]
 [e ( _doorController_fire ..  ]
-[e $U 407  ]
-"89
-[; ;main.c: 89:    case fire: doorController_closingDoor();
-[e :U 412 ]
+[e $U 396  ]
+"131
+[; ;./util.h: 131:          case fire: doorController_closingDoor();
+[e :U 401 ]
 [e ( _doorController_closingDoor ..  ]
-"90
-[; ;main.c: 90:   }
+"132
+[; ;./util.h: 132:       }
 }
-[e $U 407  ]
-[e :U 408 ]
-[e [\ -> _doorStatus `ui , $ -> . `E3805 3 `ui 409
- , $ -> . `E3805 1 `ui 410
- , $ -> . `E3805 2 `ui 411
- , $ -> . `E3805 0 `ui 412
- 407 ]
-[e :U 407 ]
-"92
-[; ;main.c: 92:   INTCON3bits.INT1IF = 0;
+[e $U 396  ]
+[e :U 397 ]
+[e [\ -> _doorStatus `ui , $ -> . `E3805 3 `ui 398
+ , $ -> . `E3805 1 `ui 399
+ , $ -> . `E3805 2 `ui 400
+ , $ -> . `E3805 0 `ui 401
+ 396 ]
+[e :U 396 ]
+"133
+[; ;./util.h: 133:       INTCON3bits.INT1IF = 0;
 [e = . . _INTCON3bits 0 0 -> -> 0 `i `uc ]
-"93
-[; ;main.c: 93:  }
+"134
+[; ;./util.h: 134:    }
 }
-[e :U 406 ]
-"96
-[; ;main.c: 96:  if (INTCON3bits.INT2IE && INTCON3bits.INT2IF) {
-[e $ ! && != -> . . _INTCON3bits 0 4 `i -> 0 `i != -> . . _INTCON3bits 0 1 `i -> 0 `i 413  ]
+[e :U 395 ]
+"137
+[; ;./util.h: 137:    if (INTCON3bits.INT2IE && INTCON3bits.INT2IF) {
+[e $ ! && != -> . . _INTCON3bits 0 4 `i -> 0 `i != -> . . _INTCON3bits 0 1 `i -> 0 `i 402  ]
 {
-"98
-[; ;main.c: 98:   switch (doorStatus) {
-[e $U 415  ]
+"139
+[; ;./util.h: 139:       switch (doorStatus) {
+[e $U 404  ]
 {
-"99
-[; ;main.c: 99:    case opened: doorController_closingDoor();
-[e :U 416 ]
+"140
+[; ;./util.h: 140:          case opened: doorController_closingDoor();
+[e :U 405 ]
 [e ( _doorController_closingDoor ..  ]
-"100
-[; ;main.c: 100:    case closed: doorController_invasion(); break;
-[e :U 417 ]
+"141
+[; ;./util.h: 141:          case closed: doorController_invasion();
+[e :U 406 ]
 [e ( _doorController_invasion ..  ]
-[e $U 414  ]
-"101
-[; ;main.c: 101:    case invasion: doorController_openingDoor();
-[e :U 418 ]
+"142
+[; ;./util.h: 142:             break;
+[e $U 403  ]
+"143
+[; ;./util.h: 143:          case invasion: doorController_openingDoor();
+[e :U 407 ]
 [e ( _doorController_openingDoor ..  ]
-"102
-[; ;main.c: 102:    case fire:;
-[e :U 419 ]
-"103
-[; ;main.c: 103:   }
+"144
+[; ;./util.h: 144:          case fire:;
+[e :U 408 ]
+"145
+[; ;./util.h: 145:       }
 }
-[e $U 414  ]
-[e :U 415 ]
-[e [\ -> _doorStatus `ui , $ -> . `E3805 2 `ui 416
- , $ -> . `E3805 3 `ui 417
- , $ -> . `E3805 1 `ui 418
- , $ -> . `E3805 0 `ui 419
- 414 ]
-[e :U 414 ]
-"105
-[; ;main.c: 105:   INTCON3bits.INT2IF = 0;
+[e $U 403  ]
+[e :U 404 ]
+[e [\ -> _doorStatus `ui , $ -> . `E3805 2 `ui 405
+ , $ -> . `E3805 3 `ui 406
+ , $ -> . `E3805 1 `ui 407
+ , $ -> . `E3805 0 `ui 408
+ 403 ]
+[e :U 403 ]
+"146
+[; ;./util.h: 146:       INTCON3bits.INT2IF = 0;
 [e = . . _INTCON3bits 0 1 -> -> 0 `i `uc ]
-"106
-[; ;main.c: 106:  }
+"147
+[; ;./util.h: 147:    }
 }
-[e :U 413 ]
-"108
-[; ;main.c: 108: }
-[e :UE 405 ]
+[e :U 402 ]
+"149
+[; ;./util.h: 149:    __asm(" clrwdt");
+[; <"  clrwdt ;# ">
+"151
+[; ;./util.h: 151: }
+[e :UE 394 ]
 }
-"110
-[; ;main.c: 110: void ADC_init() {
+"156
+[; ;./util.h: 156: void ADC_init(void)
 [v _ADC_init `(v ~T0 @X0 1 ef ]
+"157
+[; ;./util.h: 157: {
 {
 [e :U _ADC_init ]
 [f ]
-"112
-[; ;main.c: 112:  TRISAbits.RA1 = 1;
+"158
+[; ;./util.h: 158:    TRISAbits.RA1 = 1;
 [e = . . _TRISAbits 1 1 -> -> 1 `i `uc ]
-"114
-[; ;main.c: 114:  ADCON0 = 0b00000000;
+"160
+[; ;./util.h: 160:    ADCON0 = 0b00000000;
 [e = _ADCON0 -> -> 0 `i `uc ]
-"115
-[; ;main.c: 115:  ADCON1 = 0b00001110;
+"161
+[; ;./util.h: 161:    ADCON1 = 0b00001110;
 [e = _ADCON1 -> -> 14 `i `uc ]
-"116
-[; ;main.c: 116:  ADCON2 = 0b10111110;
+"162
+[; ;./util.h: 162:    ADCON2 = 0b10111110;
 [e = _ADCON2 -> -> 190 `i `uc ]
-"118
-[; ;main.c: 118:  ADCON0bits.ADON = 1;
+"164
+[; ;./util.h: 164:    ADCON0bits.ADON = 1;
 [e = . . _ADCON0bits 1 0 -> -> 1 `i `uc ]
-"119
-[; ;main.c: 119: }
-[e :UE 420 ]
+"165
+[; ;./util.h: 165: }
+[e :UE 409 ]
 }
-"122
-[; ;main.c: 122: void doorController_init()
+"170
+[; ;./util.h: 170: void doorController_init(void)
 [v _doorController_init `(v ~T0 @X0 1 ef ]
-"123
-[; ;main.c: 123: {
+"171
+[; ;./util.h: 171: {
 {
 [e :U _doorController_init ]
 [f ]
-"124
-[; ;main.c: 124:  LCD_clearScreen();
+"172
+[; ;./util.h: 172:    LCD_clearScreen();
 [e ( _LCD_clearScreen ..  ]
-"129
-[; ;main.c: 129:  LCD_placeCursorInPosition(0x81);
+"177
+[; ;./util.h: 177:    LCD_placeCursorInPosition(0x81);
 [e ( _LCD_placeCursorInPosition (1 -> -> 129 `i `uc ]
-"130
-[; ;main.c: 130:  LCD_print("Inicializando", 64);
+"178
+[; ;./util.h: 178:    LCD_print("Inicializando", 64);
 [e ( _LCD_print (2 , :s 1C -> -> 64 `i `l ]
-"131
-[; ;main.c: 131:  LCD_placeCursorInPosition(0x92);
+"179
+[; ;./util.h: 179:    LCD_placeCursorInPosition(0x92);
 [e ( _LCD_placeCursorInPosition (1 -> -> 146 `i `uc ]
-"132
-[; ;main.c: 132:  LCD_print("CONTROLADOR", 64);
+"180
+[; ;./util.h: 180:    LCD_print("CONTROLADOR", 64);
 [e ( _LCD_print (2 , :s 2C -> -> 64 `i `l ]
-"133
-[; ;main.c: 133:  LCD_placeCursorInPosition(0xD2);
+"181
+[; ;./util.h: 181:    LCD_placeCursorInPosition(0xD2);
 [e ( _LCD_placeCursorInPosition (1 -> -> 210 `i `uc ]
-"134
-[; ;main.c: 134:  LCD_print("DA PORTA", 64);
+"182
+[; ;./util.h: 182:    LCD_print("DA PORTA", 64);
 [e ( _LCD_print (2 , :s 3C -> -> 64 `i `l ]
-"135
-[; ;main.c: 135:  _delay((unsigned long)((952)*(4000000/4000.0)));
+"183
+[; ;./util.h: 183:    _delay((unsigned long)((952)*(4000000/4000.0)));
 [e ( __delay (1 -> * -> -> 952 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"137
-[; ;main.c: 137:  LCD_clearScreen();
+"185
+[; ;./util.h: 185:    LCD_clearScreen();
 [e ( _LCD_clearScreen ..  ]
-"138
-[; ;main.c: 138:  LCD_placeCursorInPosition(0x81);
+"186
+[; ;./util.h: 186:    LCD_placeCursorInPosition(0x81);
 [e ( _LCD_placeCursorInPosition (1 -> -> 129 `i `uc ]
-"139
-[; ;main.c: 139:  LCD_print("Status:", 10);
+"187
+[; ;./util.h: 187:    LCD_print("Status:", 10);
 [e ( _LCD_print (2 , :s 4C -> -> 10 `i `l ]
-"140
-[; ;main.c: 140:  LCD_placeCursorInPosition(0xC3);
+"188
+[; ;./util.h: 188:    LCD_placeCursorInPosition(0xC3);
 [e ( _LCD_placeCursorInPosition (1 -> -> 195 `i `uc ]
-"141
-[; ;main.c: 141:  LCD_print("Fechada    ", 10);
+"189
+[; ;./util.h: 189:    LCD_print("Fechada    ", 10);
 [e ( _LCD_print (2 , :s 5C -> -> 10 `i `l ]
-"142
-[; ;main.c: 142:  doorStatus = closed;
+"190
+[; ;./util.h: 190:    doorStatus = closed;
 [e = _doorStatus . `E3805 3 ]
-"144
-[; ;main.c: 144: }
-[e :UE 421 ]
+"191
+[; ;./util.h: 191: }
+[e :UE 410 ]
 }
-"146
-[; ;main.c: 146: void doorController_openingDoor()
+"196
+[; ;./util.h: 196: void doorController_openingDoor(void)
 [v _doorController_openingDoor `(v ~T0 @X0 1 ef ]
-"147
-[; ;main.c: 147: {
+"197
+[; ;./util.h: 197: {
 {
 [e :U _doorController_openingDoor ]
 [f ]
-"148
-[; ;main.c: 148:  if (doorStatus != opened) {
-[e $ ! != -> _doorStatus `ui -> . `E3805 2 `ui 423  ]
+"198
+[; ;./util.h: 198:    if (doorStatus != opened) {
+[e $ ! != -> _doorStatus `ui -> . `E3805 2 `ui 412  ]
 {
-"149
-[; ;main.c: 149:   LCD_clearScreen();
+"199
+[; ;./util.h: 199:       LCD_clearScreen();
 [e ( _LCD_clearScreen ..  ]
-"150
-[; ;main.c: 150:   LCD_placeCursorInPosition(0x81);
+"200
+[; ;./util.h: 200:       LCD_placeCursorInPosition(0x81);
 [e ( _LCD_placeCursorInPosition (1 -> -> 129 `i `uc ]
-"151
-[; ;main.c: 151:   LCD_print("Status:", 50);
-[e ( _LCD_print (2 , :s 6C -> -> 50 `i `l ]
-"153
-[; ;main.c: 153:   LCD_placeCursorInPosition(0xC3);
+"201
+[; ;./util.h: 201:       LCD_print("Status:", 10);
+[e ( _LCD_print (2 , :s 6C -> -> 10 `i `l ]
+"203
+[; ;./util.h: 203:       LCD_placeCursorInPosition(0xC3);
 [e ( _LCD_placeCursorInPosition (1 -> -> 195 `i `uc ]
-"154
-[; ;main.c: 154:   LCD_print("Abrindo...", 10);
+"204
+[; ;./util.h: 204:       LCD_print("Abrindo...", 10);
 [e ( _LCD_print (2 , :s 7C -> -> 10 `i `l ]
-"155
-[; ;main.c: 155:   LCD_customDelay_ms(1500);
+"205
+[; ;./util.h: 205:       LCD_customDelay_ms(1500);
 [e ( _LCD_customDelay_ms (1 -> -> 1500 `i `l ]
-"157
-[; ;main.c: 157:   LCD_placeCursorInPosition(0xC3);
+"207
+[; ;./util.h: 207:       LCD_placeCursorInPosition(0xC3);
 [e ( _LCD_placeCursorInPosition (1 -> -> 195 `i `uc ]
-"158
-[; ;main.c: 158:   LCD_print("Aberta    ", 10);
+"208
+[; ;./util.h: 208:       LCD_print("Aberta    ", 10);
 [e ( _LCD_print (2 , :s 8C -> -> 10 `i `l ]
-"160
-[; ;main.c: 160:   doorStatus = opened;
+"210
+[; ;./util.h: 210:       doorStatus = opened;
 [e = _doorStatus . `E3805 2 ]
-"161
-[; ;main.c: 161:  }
+"211
+[; ;./util.h: 211:    }
 }
-[e :U 423 ]
-"162
-[; ;main.c: 162: }
-[e :UE 422 ]
+[e :U 412 ]
+"212
+[; ;./util.h: 212:    __asm(" clrwdt");
+[; <"  clrwdt ;# ">
+"213
+[; ;./util.h: 213: }
+[e :UE 411 ]
 }
-"164
-[; ;main.c: 164: void doorController_closingDoor()
+"218
+[; ;./util.h: 218: void doorController_closingDoor(void)
 [v _doorController_closingDoor `(v ~T0 @X0 1 ef ]
-"165
-[; ;main.c: 165: {
+"219
+[; ;./util.h: 219: {
 {
 [e :U _doorController_closingDoor ]
 [f ]
-"166
-[; ;main.c: 166:  if (doorStatus != closed) {
-[e $ ! != -> _doorStatus `ui -> . `E3805 3 `ui 425  ]
+"220
+[; ;./util.h: 220:    if (doorStatus != closed) {
+[e $ ! != -> _doorStatus `ui -> . `E3805 3 `ui 414  ]
 {
-"167
-[; ;main.c: 167:   LCD_clearScreen();
+"221
+[; ;./util.h: 221:       LCD_clearScreen();
 [e ( _LCD_clearScreen ..  ]
-"168
-[; ;main.c: 168:   LCD_placeCursorInPosition(0x81);
+"222
+[; ;./util.h: 222:       LCD_placeCursorInPosition(0x81);
 [e ( _LCD_placeCursorInPosition (1 -> -> 129 `i `uc ]
-"169
-[; ;main.c: 169:   LCD_print("Status:", 10);
+"223
+[; ;./util.h: 223:       LCD_print("Status:", 10);
 [e ( _LCD_print (2 , :s 9C -> -> 10 `i `l ]
-"171
-[; ;main.c: 171:   LCD_placeCursorInPosition(0xC3);
+"225
+[; ;./util.h: 225:       LCD_placeCursorInPosition(0xC3);
 [e ( _LCD_placeCursorInPosition (1 -> -> 195 `i `uc ]
-"172
-[; ;main.c: 172:   LCD_print("Fechando...", 10);
+"226
+[; ;./util.h: 226:       LCD_print("Fechando...", 10);
 [e ( _LCD_print (2 , :s 10C -> -> 10 `i `l ]
-"173
-[; ;main.c: 173:   LCD_customDelay_ms(1500);
+"227
+[; ;./util.h: 227:       LCD_customDelay_ms(1500);
 [e ( _LCD_customDelay_ms (1 -> -> 1500 `i `l ]
-"175
-[; ;main.c: 175:   LCD_placeCursorInPosition(0xC3);
+"229
+[; ;./util.h: 229:       LCD_placeCursorInPosition(0xC3);
 [e ( _LCD_placeCursorInPosition (1 -> -> 195 `i `uc ]
-"176
-[; ;main.c: 176:   LCD_print("Fechada    ", 10);
+"230
+[; ;./util.h: 230:       LCD_print("Fechada    ", 10);
 [e ( _LCD_print (2 , :s 11C -> -> 10 `i `l ]
-"178
-[; ;main.c: 178:   doorStatus = closed;
+"232
+[; ;./util.h: 232:       doorStatus = closed;
 [e = _doorStatus . `E3805 3 ]
-"179
-[; ;main.c: 179:  }
+"233
+[; ;./util.h: 233:    }
 }
-[e :U 425 ]
-"180
-[; ;main.c: 180: }
-[e :UE 424 ]
+[e :U 414 ]
+"234
+[; ;./util.h: 234:    __asm(" clrwdt");
+[; <"  clrwdt ;# ">
+"235
+[; ;./util.h: 235: }
+[e :UE 413 ]
 }
-"182
-[; ;main.c: 182: void doorController_fire()
+"240
+[; ;./util.h: 240: void doorController_fire(void)
 [v _doorController_fire `(v ~T0 @X0 1 ef ]
-"183
-[; ;main.c: 183: {
+"241
+[; ;./util.h: 241: {
 {
 [e :U _doorController_fire ]
 [f ]
-"184
-[; ;main.c: 184:  LCD_clearScreen();
+"242
+[; ;./util.h: 242:    LCD_clearScreen();
 [e ( _LCD_clearScreen ..  ]
-"185
-[; ;main.c: 185:  LCD_placeCursorInPosition(0xC1);
+"243
+[; ;./util.h: 243:    LCD_placeCursorInPosition(0xC1);
 [e ( _LCD_placeCursorInPosition (1 -> -> 193 `i `uc ]
-"186
-[; ;main.c: 186:  LCD_print("INCENDIO!!", 10);
+"244
+[; ;./util.h: 244:    LCD_print("INCENDIO!", 10);
 [e ( _LCD_print (2 , :s 12C -> -> 10 `i `l ]
-"188
-[; ;main.c: 188:  LCD_placeCursorInPosition(0x91);
+"246
+[; ;./util.h: 246:    LCD_placeCursorInPosition(0x91);
 [e ( _LCD_placeCursorInPosition (1 -> -> 145 `i `uc ]
-"189
-[; ;main.c: 189:  LCD_print("Emergencia", 10);
+"247
+[; ;./util.h: 247:    LCD_print("Emergencia", 10);
 [e ( _LCD_print (2 , :s 13C -> -> 10 `i `l ]
-"191
-[; ;main.c: 191:  doorStatus = fire;
+"249
+[; ;./util.h: 249:    doorStatus = fire;
 [e = _doorStatus . `E3805 0 ]
-"192
-[; ;main.c: 192: }
-[e :UE 426 ]
+"251
+[; ;./util.h: 251:    __asm(" clrwdt");
+[; <"  clrwdt ;# ">
+"252
+[; ;./util.h: 252: }
+[e :UE 415 ]
 }
-"194
-[; ;main.c: 194: void doorController_invasion()
+"257
+[; ;./util.h: 257: void doorController_invasion(void)
 [v _doorController_invasion `(v ~T0 @X0 1 ef ]
-"195
-[; ;main.c: 195: {
+"258
+[; ;./util.h: 258: {
 {
 [e :U _doorController_invasion ]
 [f ]
-"196
-[; ;main.c: 196:  LCD_clearScreen();
+"259
+[; ;./util.h: 259:    LCD_clearScreen();
 [e ( _LCD_clearScreen ..  ]
-"197
-[; ;main.c: 197:  LCD_placeCursorInPosition(0xC1);
+"260
+[; ;./util.h: 260:    LCD_placeCursorInPosition(0xC1);
 [e ( _LCD_placeCursorInPosition (1 -> -> 193 `i `uc ]
-"198
-[; ;main.c: 198:  LCD_print("INVASAO!!", 10);
+"261
+[; ;./util.h: 261:    LCD_print("INVASAO!", 10);
 [e ( _LCD_print (2 , :s 14C -> -> 10 `i `l ]
-"200
-[; ;main.c: 200:  LCD_placeCursorInPosition(0x91);
+"263
+[; ;./util.h: 263:    LCD_placeCursorInPosition(0x91);
 [e ( _LCD_placeCursorInPosition (1 -> -> 145 `i `uc ]
-"201
-[; ;main.c: 201:  LCD_print("Emergencia", 10);
+"264
+[; ;./util.h: 264:    LCD_print("Emergencia", 10);
 [e ( _LCD_print (2 , :s 15C -> -> 10 `i `l ]
-"203
-[; ;main.c: 203:  doorStatus = invasion;
+"266
+[; ;./util.h: 266:    doorStatus = invasion;
 [e = _doorStatus . `E3805 1 ]
-"204
-[; ;main.c: 204: }
-[e :UE 427 ]
+"268
+[; ;./util.h: 268:    __asm(" clrwdt");
+[; <"  clrwdt ;# ">
+"269
+[; ;./util.h: 269: }
+[e :UE 416 ]
+}
+"24 main.c
+[; ;main.c: 24: void init(void)
+[v _init `(v ~T0 @X0 1 ef ]
+"25
+[; ;main.c: 25: {
+{
+[e :U _init ]
+[f ]
+"26
+[; ;main.c: 26:  LCD_init();
+[e ( _LCD_init ..  ]
+"27
+[; ;main.c: 27:  ADC_init();
+[e ( _ADC_init ..  ]
+"28
+[; ;main.c: 28:  interrupt_init();
+[e ( _interrupt_init ..  ]
+"29
+[; ;main.c: 29:  doorController_init();
+[e ( _doorController_init ..  ]
+"31
+[; ;main.c: 31:  __asm(" clrwdt");
+[; <"  clrwdt ;# ">
+"32
+[; ;main.c: 32: }
+[e :UE 417 ]
+}
+[v $root$_main `(v ~T0 @X0 0 e ]
+"37
+[; ;main.c: 37: void main(void)
+[v _main `(v ~T0 @X0 1 ef ]
+"38
+[; ;main.c: 38: {
+{
+[e :U _main ]
+[f ]
+"39
+[; ;main.c: 39:  init();
+[e ( _init ..  ]
+"41
+[; ;main.c: 41:  double value = 0.0;
+[v _value `d ~T0 @X0 1 a ]
+[e = _value .0.0 ]
+"42
+[; ;main.c: 42:  double previousValue = 0.0;
+[v _previousValue `d ~T0 @X0 1 a ]
+[e = _previousValue .0.0 ]
+"43
+[; ;main.c: 43:  double distance = 0.0;
+[v _distance `d ~T0 @X0 1 a ]
+[e = _distance .0.0 ]
+"45
+[; ;main.c: 45:  while (1)
+[e :U 420 ]
+"46
+[; ;main.c: 46:  {
+{
+"47
+[; ;main.c: 47:   if (doorStatus != fire && doorStatus != invasion) {
+[e $ ! && != -> _doorStatus `ui -> . `E3805 0 `ui != -> _doorStatus `ui -> . `E3805 1 `ui 422  ]
+{
+"50
+[; ;main.c: 50:    ADCON0bits.GO = 1;
+[e = . . _ADCON0bits 4 1 -> -> 1 `i `uc ]
+"51
+[; ;main.c: 51:    while (!ADCON0bits.DONE);
+[e $U 423  ]
+[e :U 424 ]
+[e :U 423 ]
+[e $ ! != -> . . _ADCON0bits 3 1 `i -> 0 `i 424  ]
+[e :U 425 ]
+"52
+[; ;main.c: 52:    __asm(" clrwdt");
+[; <"  clrwdt ;# ">
+"53
+[; ;main.c: 53:    value = (5.0) * ((ADRESH<<8) + ADRESL) / 1023;
+[e = _value / * .5.0 -> + << -> _ADRESH `i -> 8 `i -> _ADRESL `i `d -> -> 1023 `i `d ]
+"55
+[; ;main.c: 55:    if (value != previousValue) {
+[e $ ! != _value _previousValue 426  ]
+{
+"57
+[; ;main.c: 57:     distance = 5.0 - value;
+[e = _distance - .5.0 _value ]
+"59
+[; ;main.c: 59:     if (distance <= 2.0) {
+[e $ ! <= _distance .2.0 427  ]
+{
+"60
+[; ;main.c: 60:      doorController_openingDoor();
+[e ( _doorController_openingDoor ..  ]
+"61
+[; ;main.c: 61:     } else {
+}
+[e $U 428  ]
+[e :U 427 ]
+{
+"62
+[; ;main.c: 62:      doorController_closingDoor();
+[e ( _doorController_closingDoor ..  ]
+"63
+[; ;main.c: 63:     }
+}
+[e :U 428 ]
+"69
+[; ;main.c: 69:     previousValue = value;
+[e = _previousValue _value ]
+"70
+[; ;main.c: 70:    }
+}
+[e :U 426 ]
+"71
+[; ;main.c: 71:   }
+}
+[e :U 422 ]
+"73
+[; ;main.c: 73:  }
+}
+[e :U 419 ]
+[e $U 420  ]
+[e :U 421 ]
+"75
+[; ;main.c: 75:  return;
+[e $UE 418  ]
+"76
+[; ;main.c: 76: }
+[e :UE 418 ]
 }
 [a 1C 73 110 105 99 105 97 108 105 122 97 110 100 111 0 ]
 [a 13C 69 109 101 114 103 101 110 99 105 97 0 ]
@@ -1687,8 +1710,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [a 9C 83 116 97 116 117 115 58 0 ]
 [a 7C 65 98 114 105 110 100 111 46 46 46 0 ]
 [a 10C 70 101 99 104 97 110 100 111 46 46 46 0 ]
-[a 12C 73 78 67 69 78 68 73 79 33 33 0 ]
-[a 14C 73 78 86 65 83 65 79 33 33 0 ]
+[a 12C 73 78 67 69 78 68 73 79 33 0 ]
+[a 14C 73 78 86 65 83 65 79 33 0 ]
 [a 8C 65 98 101 114 116 97 32 32 32 32 0 ]
 [a 5C 70 101 99 104 97 100 97 32 32 32 32 0 ]
 [a 11C 70 101 99 104 97 100 97 32 32 32 32 0 ]

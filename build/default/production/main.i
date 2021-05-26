@@ -7,8 +7,7 @@
 # 1 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
 # 1 "main.c" 2
-
-
+# 18 "main.c"
 # 1 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\\pic\\include\\xc.h" 1 3
 # 18 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -5625,10 +5624,79 @@ extern __attribute__((nonreentrant)) void _delaywdt(unsigned long);
 #pragma intrinsic(_delay3)
 extern __attribute__((nonreentrant)) void _delay3(unsigned char);
 # 33 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\\pic\\include\\xc.h" 2 3
-# 3 "main.c" 2
+# 18 "main.c" 2
+
+# 1 "./util.h" 1
+# 10 "./util.h"
+#pragma config PLLDIV = 1
+#pragma config CPUDIV = OSC1_PLL2
+#pragma config USBDIV = 1
+
+
+#pragma config FOSC = HS
+#pragma config FCMEN = OFF
+#pragma config IESO = OFF
+
+
+#pragma config PWRT = OFF
+#pragma config BOR = OFF
+#pragma config BORV = 3
+#pragma config VREGEN = OFF
+
+
+#pragma config WDT = ON
+#pragma config WDTPS = 8192
+
+
+#pragma config CCP2MX = ON
+#pragma config PBADEN = OFF
+#pragma config LPT1OSC = OFF
+#pragma config MCLRE = ON
+
+
+#pragma config STVREN = OFF
+#pragma config LVP = OFF
+#pragma config ICPRT = OFF
+#pragma config XINST = OFF
+
+
+#pragma config CP0 = OFF
+#pragma config CP1 = OFF
+#pragma config CP2 = OFF
+#pragma config CP3 = OFF
+
+
+#pragma config CPB = OFF
+#pragma config CPD = OFF
+
+
+#pragma config WRT0 = OFF
+#pragma config WRT1 = OFF
+#pragma config WRT2 = OFF
+#pragma config WRT3 = OFF
+
+
+#pragma config WRTC = OFF
+#pragma config WRTB = OFF
+#pragma config WRTD = OFF
+
+
+#pragma config EBTR0 = OFF
+#pragma config EBTR1 = OFF
+#pragma config EBTR2 = OFF
+#pragma config EBTR3 = OFF
+
+
+#pragma config EBTRB = OFF
+
+
+
+
+
+
 
 # 1 "./lcd.h" 1
-# 10 "./lcd.h"
+# 14 "./lcd.h"
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\string.h" 1 3
 # 25 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\string.h" 3
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\bits/alltypes.h" 1 3
@@ -5684,7 +5752,7 @@ size_t strxfrm_l (char *restrict, const char *restrict, size_t, locale_t);
 
 
 void *memccpy (void *restrict, const void *restrict, int, size_t);
-# 10 "./lcd.h" 2
+# 14 "./lcd.h" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\math.h" 1 3
 # 10 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\math.h" 3
@@ -6149,7 +6217,7 @@ double jn(int, double);
 double y0(double);
 double y1(double);
 double yn(int, double);
-# 11 "./lcd.h" 2
+# 15 "./lcd.h" 2
 
 
 void LCD_init()
@@ -6179,7 +6247,7 @@ void LCD_init()
    PORTEbits.RE2 = 1;
 }
 
-void LCD_clearScreen()
+void LCD_clearScreen(void)
 {
    PORTEbits.RE2 = 0;
    PORTEbits.RE1 = 1;
@@ -6247,83 +6315,14 @@ void LCD_printFloatNumber(double number, int precision)
    while ( aux < counter + precision) {
       aux++;
       number *= 10;
-      digit = floorf(number);
+      digit = (char)floorf(number);
       number -= digit;
       LCD_printChar(48 + digit);
       if (aux == counter)
          LCD_printChar(46);
    }
 }
-# 4 "main.c" 2
-
-# 1 "./util.h" 1
-
-
-
-
-
-#pragma config PLLDIV = 1
-#pragma config CPUDIV = OSC1_PLL2
-#pragma config USBDIV = 1
-
-
-#pragma config FOSC = HS
-#pragma config FCMEN = OFF
-#pragma config IESO = OFF
-
-
-#pragma config PWRT = OFF
-#pragma config BOR = OFF
-#pragma config BORV = 3
-#pragma config VREGEN = OFF
-
-
-#pragma config WDT = OFF
-#pragma config WDTPS = 32768
-
-
-#pragma config CCP2MX = ON
-#pragma config PBADEN = OFF
-#pragma config LPT1OSC = OFF
-#pragma config MCLRE = ON
-
-
-#pragma config STVREN = OFF
-#pragma config LVP = OFF
-#pragma config ICPRT = OFF
-#pragma config XINST = OFF
-
-
-#pragma config CP0 = OFF
-#pragma config CP1 = OFF
-#pragma config CP2 = OFF
-#pragma config CP3 = OFF
-
-
-#pragma config CPB = OFF
-#pragma config CPD = OFF
-
-
-#pragma config WRT0 = OFF
-#pragma config WRT1 = OFF
-#pragma config WRT2 = OFF
-#pragma config WRT3 = OFF
-
-
-#pragma config WRTC = OFF
-#pragma config WRTB = OFF
-#pragma config WRTD = OFF
-
-
-#pragma config EBTR0 = OFF
-#pragma config EBTR1 = OFF
-#pragma config EBTR2 = OFF
-#pragma config EBTR3 = OFF
-
-
-#pragma config EBTRB = OFF
-
-
+# 76 "./util.h" 2
 
 
 typedef enum status {
@@ -6332,6 +6331,8 @@ typedef enum status {
    opened = 3,
    closed = 4
 } DoorStatus;
+
+DoorStatus doorStatus = closed;
 
 void interrupt_init(void);
 void __attribute__((picinterrupt(("high_priority")))) interrupt_service_routine(void);
@@ -6342,55 +6343,6 @@ void doorController_openingDoor(void);
 void doorController_closingDoor(void);
 void doorController_fire(void);
 void doorController_invasion(void);
-# 5 "main.c" 2
-
-
-DoorStatus doorStatus = 4;
-
-void main(void)
-{
- LCD_init();
- ADC_init();
- interrupt_init();
-
- doorController_init();
-
- double value = 0.0;
- double previousValue = 0.0;
-
- double distance = 0.0;
-
- while (1)
- {
-  if (doorStatus != fire && doorStatus != invasion) {
-
-   ADCON0bits.GO = 1;
-   while (!ADCON0bits.DONE);
-   value = (5.0) * ((ADRESH<<8) + ADRESL) / 1023;
-
-   if (value != previousValue) {
-
-    distance = 5.0 - value;
-
-    if (distance <= 2.0) {
-
-     doorController_openingDoor();
-    } else {
-
-     doorController_closingDoor();
-    }
-
-
-    LCD_placeCursorInPosition(0xD1);
-    LCD_printFloatNumber(value, 2);
-    previousValue = value;
-   }
-  }
-
- }
-
- return;
-}
 
 
 
@@ -6398,22 +6350,21 @@ void main(void)
 void interrupt_init(void)
 {
 
- RCONbits.IPEN = 1;
+   RCONbits.IPEN = 1;
 
 
- INTCONbits.GIEH = 1;
- INTCONbits.GIEL = 0;
+   INTCONbits.GIEH = 1;
+   INTCONbits.GIEL = 0;
 
- INTCON3bits.INT1F = 0;
- INTCON3bits.INT1IP = 1;
- INTCON2bits.INTEDG1 = 0;
- INTCON3bits.INT1IE = 1;
+   INTCON3bits.INT1F = 0;
+   INTCON3bits.INT1IP = 1;
+   INTCON2bits.INTEDG1 = 0;
+   INTCON3bits.INT1IE = 1;
 
- INTCON3bits.INT2IF = 0;
- INTCON3bits.INT2IP = 1;
- INTCON2bits.INTEDG2 = 0;
- INTCON3bits.INT2IE = 1;
-
+   INTCON3bits.INT2IF = 0;
+   INTCON3bits.INT2IP = 1;
+   INTCON2bits.INTEDG2 = 0;
+   INTCON3bits.INT2IE = 1;
 }
 
 
@@ -6421,125 +6372,207 @@ void interrupt_init(void)
 
 void __attribute__((picinterrupt(("high_priority")))) interrupt_service_routine(void)
 {
- if (INTCON3bits.INT1IE && INTCON3bits.INT1IF) {
+   if (INTCON3bits.INT1IE && INTCON3bits.INT1IF) {
 
-  switch (doorStatus) {
-   case closed:
-   case invasion: doorController_openingDoor();
-   case opened: doorController_fire(); break;
-   case fire: doorController_closingDoor();
+      switch (doorStatus) {
+         case closed:
+         case invasion: doorController_openingDoor();
+         case opened: doorController_fire(); break;
+         case fire: doorController_closingDoor();
+      }
+      INTCON3bits.INT1IF = 0;
+   }
+
+
+   if (INTCON3bits.INT2IE && INTCON3bits.INT2IF) {
+
+      switch (doorStatus) {
+         case opened: doorController_closingDoor();
+         case closed: doorController_invasion();
+            break;
+         case invasion: doorController_openingDoor();
+         case fire:;
+      }
+      INTCON3bits.INT2IF = 0;
+   }
+
+   __asm(" clrwdt");
+
+}
+
+
+
+
+void ADC_init(void)
+{
+   TRISAbits.RA1 = 1;
+
+   ADCON0 = 0b00000000;
+   ADCON1 = 0b00001110;
+   ADCON2 = 0b10111110;
+
+   ADCON0bits.ADON = 1;
+}
+
+
+
+
+void doorController_init(void)
+{
+   LCD_clearScreen();
+
+
+
+
+   LCD_placeCursorInPosition(0x81);
+   LCD_print("Inicializando", 64);
+   LCD_placeCursorInPosition(0x92);
+   LCD_print("CONTROLADOR", 64);
+   LCD_placeCursorInPosition(0xD2);
+   LCD_print("DA PORTA", 64);
+   _delay((unsigned long)((952)*(4000000/4000.0)));
+
+   LCD_clearScreen();
+   LCD_placeCursorInPosition(0x81);
+   LCD_print("Status:", 10);
+   LCD_placeCursorInPosition(0xC3);
+   LCD_print("Fechada    ", 10);
+   doorStatus = closed;
+}
+
+
+
+
+void doorController_openingDoor(void)
+{
+   if (doorStatus != opened) {
+      LCD_clearScreen();
+      LCD_placeCursorInPosition(0x81);
+      LCD_print("Status:", 10);
+
+      LCD_placeCursorInPosition(0xC3);
+      LCD_print("Abrindo...", 10);
+      LCD_customDelay_ms(1500);
+
+      LCD_placeCursorInPosition(0xC3);
+      LCD_print("Aberta    ", 10);
+
+      doorStatus = opened;
+   }
+   __asm(" clrwdt");
+}
+
+
+
+
+void doorController_closingDoor(void)
+{
+   if (doorStatus != closed) {
+      LCD_clearScreen();
+      LCD_placeCursorInPosition(0x81);
+      LCD_print("Status:", 10);
+
+      LCD_placeCursorInPosition(0xC3);
+      LCD_print("Fechando...", 10);
+      LCD_customDelay_ms(1500);
+
+      LCD_placeCursorInPosition(0xC3);
+      LCD_print("Fechada    ", 10);
+
+      doorStatus = closed;
+   }
+   __asm(" clrwdt");
+}
+
+
+
+
+void doorController_fire(void)
+{
+   LCD_clearScreen();
+   LCD_placeCursorInPosition(0xC1);
+   LCD_print("INCENDIO!", 10);
+
+   LCD_placeCursorInPosition(0x91);
+   LCD_print("Emergencia", 10);
+
+   doorStatus = fire;
+
+   __asm(" clrwdt");
+}
+
+
+
+
+void doorController_invasion(void)
+{
+   LCD_clearScreen();
+   LCD_placeCursorInPosition(0xC1);
+   LCD_print("INVASAO!", 10);
+
+   LCD_placeCursorInPosition(0x91);
+   LCD_print("Emergencia", 10);
+
+   doorStatus = invasion;
+
+   __asm(" clrwdt");
+}
+# 19 "main.c" 2
+
+
+
+
+
+void init(void)
+{
+ LCD_init();
+ ADC_init();
+ interrupt_init();
+ doorController_init();
+
+ __asm(" clrwdt");
+}
+
+
+
+
+void main(void)
+{
+ init();
+
+ double value = 0.0;
+ double previousValue = 0.0;
+ double distance = 0.0;
+
+ while (1)
+ {
+  if (doorStatus != fire && doorStatus != invasion) {
+
+
+   ADCON0bits.GO = 1;
+   while (!ADCON0bits.DONE);
+   __asm(" clrwdt");
+   value = (5.0) * ((ADRESH<<8) + ADRESL) / 1023;
+
+   if (value != previousValue) {
+
+    distance = 5.0 - value;
+
+    if (distance <= 2.0) {
+     doorController_openingDoor();
+    } else {
+     doorController_closingDoor();
+    }
+
+
+
+
+
+    previousValue = value;
+   }
   }
 
-  INTCON3bits.INT1IF = 0;
  }
 
-
- if (INTCON3bits.INT2IE && INTCON3bits.INT2IF) {
-
-  switch (doorStatus) {
-   case opened: doorController_closingDoor();
-   case closed: doorController_invasion(); break;
-   case invasion: doorController_openingDoor();
-   case fire:;
-  }
-
-  INTCON3bits.INT2IF = 0;
- }
-
-}
-
-void ADC_init() {
-
- TRISAbits.RA1 = 1;
-
- ADCON0 = 0b00000000;
- ADCON1 = 0b00001110;
- ADCON2 = 0b10111110;
-
- ADCON0bits.ADON = 1;
-}
-
-
-void doorController_init()
-{
- LCD_clearScreen();
-
-
-
-
- LCD_placeCursorInPosition(0x81);
- LCD_print("Inicializando", 64);
- LCD_placeCursorInPosition(0x92);
- LCD_print("CONTROLADOR", 64);
- LCD_placeCursorInPosition(0xD2);
- LCD_print("DA PORTA", 64);
- _delay((unsigned long)((952)*(4000000/4000.0)));
-
- LCD_clearScreen();
- LCD_placeCursorInPosition(0x81);
- LCD_print("Status:", 10);
- LCD_placeCursorInPosition(0xC3);
- LCD_print("Fechada    ", 10);
- doorStatus = closed;
-
-}
-
-void doorController_openingDoor()
-{
- if (doorStatus != opened) {
-  LCD_clearScreen();
-  LCD_placeCursorInPosition(0x81);
-  LCD_print("Status:", 50);
-
-  LCD_placeCursorInPosition(0xC3);
-  LCD_print("Abrindo...", 10);
-  LCD_customDelay_ms(1500);
-
-  LCD_placeCursorInPosition(0xC3);
-  LCD_print("Aberta    ", 10);
-
-  doorStatus = opened;
- }
-}
-
-void doorController_closingDoor()
-{
- if (doorStatus != closed) {
-  LCD_clearScreen();
-  LCD_placeCursorInPosition(0x81);
-  LCD_print("Status:", 10);
-
-  LCD_placeCursorInPosition(0xC3);
-  LCD_print("Fechando...", 10);
-  LCD_customDelay_ms(1500);
-
-  LCD_placeCursorInPosition(0xC3);
-  LCD_print("Fechada    ", 10);
-
-  doorStatus = closed;
- }
-}
-
-void doorController_fire()
-{
- LCD_clearScreen();
- LCD_placeCursorInPosition(0xC1);
- LCD_print("INCENDIO!!", 10);
-
- LCD_placeCursorInPosition(0x91);
- LCD_print("Emergencia", 10);
-
- doorStatus = fire;
-}
-
-void doorController_invasion()
-{
- LCD_clearScreen();
- LCD_placeCursorInPosition(0xC1);
- LCD_print("INVASAO!!", 10);
-
- LCD_placeCursorInPosition(0x91);
- LCD_print("Emergencia", 10);
-
- doorStatus = invasion;
+ return;
 }

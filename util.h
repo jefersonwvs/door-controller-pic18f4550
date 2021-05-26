@@ -1,3 +1,7 @@
+/**
+ * Biblioteca com sub-rotinas para o programa principal.
+ */
+
 // PIC18F4550 Configuration Bit Settings
 
 // 'C' source line config statements
@@ -19,8 +23,8 @@
 #pragma config VREGEN = OFF     // USB Voltage Regulator Enable bit (USB voltage regulator disabled)
 
 // CONFIG2H
-#pragma config WDT = OFF        // Watchdog Timer Enable bit (WDT disabled (control is placed on the SWDTEN bit))
-#pragma config WDTPS = 32768    // Watchdog Timer Postscale Select bits (1:32768)
+#pragma config WDT = ON        // Watchdog Timer Enable bit (WDT disabled (control is placed on the SWDTEN bit))
+#pragma config WDTPS = 8192    // Watchdog Timer Postscale Select bits (1:32768)
 
 // CONFIG3H
 #pragma config CCP2MX = ON      // CCP2 MUX bit (CCP2 input/output is multiplexed with RC1)
@@ -67,12 +71,18 @@
 // #pragma config statements should precede project file includes.
 // Use project enums instead of #define for ON and OFF.
 
+#define _XTAL_FREQ 4000000
+
+#include "lcd.h"
+
 typedef enum status {
-   fire = 1,      // incêndio
-   invasion = 2,  // invasão
-   opened = 3,    // porta aberta
-   closed = 4     // porta fechada
+   fire = 1, // incêndio
+   invasion = 2, // invasão
+   opened = 3, // porta aberta
+   closed = 4 // porta fechada
 } DoorStatus;
+
+DoorStatus doorStatus = closed;
 
 void  interrupt_init(void);
 void  __interrupt(high_priority) interrupt_service_routine(void);
@@ -83,3 +93,177 @@ void  doorController_openingDoor(void);
 void  doorController_closingDoor(void);
 void  doorController_fire(void);
 void  doorController_invasion(void);
+
+/**
+ * Procedimento que iniciliza e configura interrupções.
+ */
+void interrupt_init(void)
+{
+   /* RCON: RESET CONTROL REGISTER */
+   RCONbits.IPEN = 1; // enable priority levels on interrupts
+
+   /* INTCON: INTERRUPT CONTROL REGISTER */
+   INTCONbits.GIEH = 1; // when IPEN = 1, enables all high-priority interrupts
+   INTCONbits.GIEL = 0; // when IPEN = 1, disables all low-priority peripheral interrupts
+
+   INTCON3bits.INT1F = 0; // the INT1 external interrupt did not occur
+   INTCON3bits.INT1IP = 1; // high priority
+   INTCON2bits.INTEDG1 = 0; // interrupt on falling edge
+   INTCON3bits.INT1IE = 1; // enables the INT2 external interrupt 
+
+   INTCON3bits.INT2IF = 0;
+   INTCON3bits.INT2IP = 1;
+   INTCON2bits.INTEDG2 = 0;
+   INTCON3bits.INT2IE = 1;
+}
+
+/**
+ * Procedimento tratador de interrupções.
+ */
+void __interrupt(high_priority) interrupt_service_routine(void)
+{
+   if (INTCON3bits.INT1IE && INTCON3bits.INT1IF) {
+   // Ativando ou desativando alarme de incêndio
+      switch (doorStatus) {
+         case closed:
+         case invasion: doorController_openingDoor();
+         case opened:   doorController_fire();  break;
+         case fire: doorController_closingDoor();
+      }
+      INTCON3bits.INT1IF = 0;
+   }
+
+
+   if (INTCON3bits.INT2IE && INTCON3bits.INT2IF) {
+   // Ativando ou desativando alarme de invasão
+      switch (doorStatus) {
+         case opened: doorController_closingDoor();
+         case closed: doorController_invasion();
+            break;
+         case invasion: doorController_openingDoor();
+         case fire:;
+      }
+      INTCON3bits.INT2IF = 0;
+   }
+   
+   CLRWDT();
+
+}
+
+/**
+ * Procedimento que inicializa e configura o módulo conversor A/D.
+ */
+void ADC_init(void)
+{
+   TRISAbits.RA1 = 1; // entrada do sinal analógico
+
+   ADCON0 = 0b00000000; // canal 0 com conversor desativado
+   ADCON1 = 0b00001110; // configura tensão referência interna
+   ADCON2 = 0b10111110; // configura AD com 20TAD Fosc/64
+
+   ADCON0bits.ADON = 1; // Ativa o conversor
+}
+
+/**
+ * Procedimento que inicializa e configura o controlador de portas.
+ */
+void doorController_init(void)
+{
+   LCD_clearScreen();
+
+   /* Inicialização do controlador.
+    * Tempo = (32 letras * 64 ms de delay) + 952 ms = 1024ms + 952ms = 3000ms = 3s
+    */
+   LCD_placeCursorInPosition(0x81);
+   LCD_print("Inicializando", 64);
+   LCD_placeCursorInPosition(0x92);
+   LCD_print("CONTROLADOR", 64);
+   LCD_placeCursorInPosition(0xD2);
+   LCD_print("DA PORTA", 64);
+   __delay_ms(952);
+
+   LCD_clearScreen();
+   LCD_placeCursorInPosition(0x81);
+   LCD_print("Status:", 10);
+   LCD_placeCursorInPosition(0xC3);
+   LCD_print("Fechada    ", 10);
+   doorStatus = closed;
+}
+
+/**
+ * Procedimento para abrir a porta.
+ */
+void doorController_openingDoor(void)
+{
+   if (doorStatus != opened) { // se a porta não estiver aberta, abrir.
+      LCD_clearScreen();
+      LCD_placeCursorInPosition(0x81);
+      LCD_print("Status:", 10);
+
+      LCD_placeCursorInPosition(0xC3);
+      LCD_print("Abrindo...", 10);
+      LCD_customDelay_ms(1500); // a porta gasta 1,5 s para abrir
+
+      LCD_placeCursorInPosition(0xC3);
+      LCD_print("Aberta    ", 10);
+
+      doorStatus = opened;
+   }
+   CLRWDT();
+}
+
+/**
+ * Procedimento para fechar a porta.
+ */
+void doorController_closingDoor(void)
+{
+   if (doorStatus != closed) { // se a porta não estiver fechada, fechar.
+      LCD_clearScreen();
+      LCD_placeCursorInPosition(0x81);
+      LCD_print("Status:", 10);
+
+      LCD_placeCursorInPosition(0xC3);
+      LCD_print("Fechando...", 10);
+      LCD_customDelay_ms(1500); // a porta gasta 1,5 s para fechar
+
+      LCD_placeCursorInPosition(0xC3);
+      LCD_print("Fechada    ", 10);
+
+      doorStatus = closed;
+   }
+   CLRWDT();
+}
+
+/**
+ * Procedimento para apresentar alerta de incêndio.
+ */
+void doorController_fire(void)
+{
+   LCD_clearScreen();
+   LCD_placeCursorInPosition(0xC1);
+   LCD_print("INCENDIO!", 10);
+
+   LCD_placeCursorInPosition(0x91);
+   LCD_print("Emergencia", 10);
+
+   doorStatus = fire;
+   
+   CLRWDT();
+}
+
+/**
+ * Procedimento para apresentar alerta de invasão.
+ */
+void doorController_invasion(void)
+{
+   LCD_clearScreen();
+   LCD_placeCursorInPosition(0xC1);
+   LCD_print("INVASAO!", 10);
+
+   LCD_placeCursorInPosition(0x91);
+   LCD_print("Emergencia", 10);
+
+   doorStatus = invasion;
+   
+   CLRWDT();
+}
