@@ -74,12 +74,12 @@ typedef enum status {
    closed = 4     // porta fechada
 } DoorStatus;
 
+void  interrupt_init(void);
+void  __interrupt(high_priority) interrupt_service_routine(void);
+void  ADC_init(void);
+
 void  doorController_init(void);
 void  doorController_openingDoor(void);
 void  doorController_closingDoor(void);
 void  doorController_fire(void);
 void  doorController_invasion(void);
-
-void  interrupt_config(void);
-void  __interrupt(high_priority) interrupt_service_routine(void);
-void  statusFire(void);
