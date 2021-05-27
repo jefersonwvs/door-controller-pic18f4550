@@ -12,7 +12,7 @@
  * Desenvolvido por: Filipe Messias,
  *						   Jeferson Willian Vieira Silva, e
  *							João Vitor Nascimento de Souza.
- * Desenvolvido em: 19 e 26 de maio de 2021.
+ * Desenvolvido em: 19, 26 e 27 de maio de 2021.
  */
 
 #include <xc.h>
@@ -49,7 +49,7 @@ void main(void)
 			
 			ADCON0bits.GO = 1;
 			while (!ADCON0bits.DONE);
-			CLRWDT();
+			//CLRWDT();
 			value = (5.0) * ((ADRESH<<8) + ADRESL) / 1023;
 
 			if (value != previousValue) { // evitar atualização do display quando a leitura é igual a anterior
@@ -62,14 +62,19 @@ void main(void)
 					doorController_closingDoor();	// a porta fecha se estiver aberta
 				}
 
-				/* DEBUG
-				LCD_placeCursorInPosition(0xD1);
-				LCD_printFloatNumber(value, 2);*/
+				LCD_placeCursorInPosition(0x91);
+				LCD_print("Movimento:", 10);
+				LCD_placeCursorInPosition(0xD3);
+				LCD_printFloatNumber(distance, 2);
+				LCD_placeCursorInPosition(0xD7);
+				LCD_printChar('m');
 				
 				previousValue = value;
 			}
 		}
-		
+		if (doorStatus != opened) {
+			CLRWDT(); // Free Conter WTD.
+		}
 	}
 	
 	return;

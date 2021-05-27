@@ -758,7 +758,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "26
 [p x WDT  =  ON         ]
 "27
-[p x WDTPS  =  8192     ]
+[p x WDTPS  =  4096     ]
 "30
 [p x CCP2MX  =  ON       ]
 "31
@@ -1643,9 +1643,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 423 ]
 [e $ ! != -> . . _ADCON0bits 3 1 `i -> 0 `i 424  ]
 [e :U 425 ]
-"52
-[; ;main.c: 52:    __asm(" clrwdt");
-[; <"  clrwdt ;# ">
 "53
 [; ;main.c: 53:    value = (5.0) * ((ADRESH<<8) + ADRESL) / 1023;
 [e = _value / * .5.0 -> + << -> _ADRESH `i -> 8 `i -> _ADRESL `i `d -> -> 1023 `i `d ]
@@ -1676,28 +1673,57 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 63:     }
 }
 [e :U 428 ]
+"65
+[; ;main.c: 65:     LCD_placeCursorInPosition(0x91);
+[e ( _LCD_placeCursorInPosition (1 -> -> 145 `i `uc ]
+"66
+[; ;main.c: 66:     LCD_print("Movimento:", 10);
+[e ( _LCD_print (2 , :s 16C -> -> 10 `i `l ]
+"67
+[; ;main.c: 67:     LCD_placeCursorInPosition(0xD3);
+[e ( _LCD_placeCursorInPosition (1 -> -> 211 `i `uc ]
+"68
+[; ;main.c: 68:     LCD_printFloatNumber(distance, 2);
+[e ( _LCD_printFloatNumber (2 , _distance -> 2 `i ]
 "69
-[; ;main.c: 69:     previousValue = value;
-[e = _previousValue _value ]
+[; ;main.c: 69:     LCD_placeCursorInPosition(0xD7);
+[e ( _LCD_placeCursorInPosition (1 -> -> 215 `i `uc ]
 "70
-[; ;main.c: 70:    }
+[; ;main.c: 70:     LCD_printChar('m');
+[e ( _LCD_printChar (1 -> -> 109 `ui `uc ]
+"72
+[; ;main.c: 72:     previousValue = value;
+[e = _previousValue _value ]
+"73
+[; ;main.c: 73:    }
 }
 [e :U 426 ]
-"71
-[; ;main.c: 71:   }
+"74
+[; ;main.c: 74:   }
 }
 [e :U 422 ]
-"73
-[; ;main.c: 73:  }
+"75
+[; ;main.c: 75:   if (doorStatus != opened) {
+[e $ ! != -> _doorStatus `ui -> . `E3805 2 `ui 429  ]
+{
+"76
+[; ;main.c: 76:    __asm(" clrwdt");
+[; <"  clrwdt ;# ">
+"77
+[; ;main.c: 77:   }
+}
+[e :U 429 ]
+"78
+[; ;main.c: 78:  }
 }
 [e :U 419 ]
 [e $U 420  ]
 [e :U 421 ]
-"75
-[; ;main.c: 75:  return;
+"80
+[; ;main.c: 80:  return;
 [e $UE 418  ]
-"76
-[; ;main.c: 76: }
+"81
+[; ;main.c: 81: }
 [e :UE 418 ]
 }
 [a 1C 73 110 105 99 105 97 108 105 122 97 110 100 111 0 ]
@@ -1708,6 +1734,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [a 4C 83 116 97 116 117 115 58 0 ]
 [a 6C 83 116 97 116 117 115 58 0 ]
 [a 9C 83 116 97 116 117 115 58 0 ]
+[a 16C 77 111 118 105 109 101 110 116 111 58 0 ]
 [a 7C 65 98 114 105 110 100 111 46 46 46 0 ]
 [a 10C 70 101 99 104 97 110 100 111 46 46 46 0 ]
 [a 12C 73 78 67 69 78 68 73 79 33 0 ]

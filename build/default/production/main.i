@@ -5645,7 +5645,7 @@ extern __attribute__((nonreentrant)) void _delay3(unsigned char);
 
 
 #pragma config WDT = ON
-#pragma config WDTPS = 8192
+#pragma config WDTPS = 4096
 
 
 #pragma config CCP2MX = ON
@@ -6551,7 +6551,7 @@ void main(void)
 
    ADCON0bits.GO = 1;
    while (!ADCON0bits.DONE);
-   __asm(" clrwdt");
+
    value = (5.0) * ((ADRESH<<8) + ADRESL) / 1023;
 
    if (value != previousValue) {
@@ -6564,14 +6564,19 @@ void main(void)
      doorController_closingDoor();
     }
 
-
-
-
+    LCD_placeCursorInPosition(0x91);
+    LCD_print("Movimento:", 10);
+    LCD_placeCursorInPosition(0xD3);
+    LCD_printFloatNumber(distance, 2);
+    LCD_placeCursorInPosition(0xD7);
+    LCD_printChar('m');
 
     previousValue = value;
    }
   }
-
+  if (doorStatus != opened) {
+   __asm(" clrwdt");
+  }
  }
 
  return;

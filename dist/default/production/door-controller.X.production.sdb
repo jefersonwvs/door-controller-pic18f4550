@@ -26,6 +26,8 @@ closed 4
 [v i2_LCD_print LCD_print `(v  1 e 1 0 ]
 "87
 [v _LCD_printChar LCD_printChar `(v  1 e 1 0 ]
+"96
+[v _LCD_printFloatNumber LCD_printFloatNumber `(v  1 e 1 0 ]
 "100 F:\Documentos\ws-mplabx\door-controller.X/util.h
 [v _interrupt_init interrupt_init `(v  1 e 1 0 ]
 "123
@@ -292,12 +294,12 @@ closed 4
 [v _main main `(v  1 e 1 0 ]
 {
 "41
-[v main@value value `d  1 a 4 36 ]
+[v main@value value `d  1 a 4 50 ]
 "43
-[v main@distance distance `d  1 a 4 32 ]
+[v main@distance distance `d  1 a 4 46 ]
 "42
-[v main@previousValue previousValue `d  1 a 4 28 ]
-"76
+[v main@previousValue previousValue `d  1 a 4 42 ]
+"81
 } 0
 "24
 [v _init init `(v  1 e 1 0 ]
@@ -379,6 +381,41 @@ closed 4
 {
 "53
 } 0
+"4 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\fleq.c
+[v ___fleq __fleq `(b  1 e 0 0 ]
+{
+[v ___fleq@ff1 ff1 `d  1 p 4 22 ]
+[v ___fleq@ff2 ff2 `d  1 p 4 26 ]
+"12
+} 0
+"96 F:\Documentos\ws-mplabx\door-controller.X/lcd.h
+[v _LCD_printFloatNumber LCD_printFloatNumber `(v  1 e 1 0 ]
+{
+"98
+[v LCD_printFloatNumber@counter counter `uc  1 a 1 39 ]
+[v LCD_printFloatNumber@aux aux `uc  1 a 1 38 ]
+[v LCD_printFloatNumber@digit digit `uc  1 a 1 37 ]
+"96
+[v LCD_printFloatNumber@number number `d  1 p 4 26 ]
+[v LCD_printFloatNumber@precision precision `i  1 p 2 30 ]
+"118
+} 0
+"3 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\floorf.c
+[v _floorf floorf `(f  1 e 4 0 ]
+{
+[u S1009 . 4 `f 1 f 4 0 `ul 1 i 4 0 ]
+"5
+[v floorf@u u `S1009  1 a 4 38 ]
+"7
+[v floorf@m m `ul  1 a 4 32 ]
+"6
+[v floorf@e e `i  1 a 2 36 ]
+"3
+[v floorf@x x `f  1 p 4 22 ]
+"4
+[v floorf@F527 F527 `S1009  1 s 4 F527 ]
+"27
+} 0
 "10 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\xxtofl.c
 [v ___xxtofl __xxtofl `(d  1 e 4 0 ]
 {
@@ -393,6 +430,16 @@ closed 4
 "15
 [v ___xxtofl@sign sign `uc  1 a 1 30 ]
 "44
+} 0
+"43 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\fltol.c
+[v ___fltol __fltol `(l  1 e 4 0 ]
+{
+"45
+[v ___fltol@exp1 exp1 `uc  1 a 1 51 ]
+[v ___fltol@sign1 sign1 `uc  1 a 1 50 ]
+"43
+[v ___fltol@f1 f1 `d  1 p 4 42 ]
+"70
 } 0
 "245 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\sprcadd.c
 [v ___flsub __flsub `(d  1 e 4 0 ]
@@ -420,17 +467,17 @@ closed 4
 "8 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\sprcmul.c
 [v ___flmul __flmul `(d  1 e 4 0 ]
 {
-[s S872 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+[s S874 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
 "13
-[s S877 . 4 `s 1 wordA 2 0 `s 1 wordB 2 2 ]
-[u S880 . 4 `l 1 i 4 0 `d 1 f 4 0 `S872 1 fAsBytes 4 0 `S877 1 fAsWords 4 0 ]
-[v ___flmul@prod prod `S880  1 a 4 7 ]
+[s S879 . 4 `s 1 wordA 2 0 `s 1 wordB 2 2 ]
+[u S882 . 4 `l 1 i 4 0 `d 1 f 4 0 `S874 1 fAsBytes 4 0 `S879 1 fAsWords 4 0 ]
+[v ___flmul@prod prod `S882  1 a 4 7 ]
 "12
 [v ___flmul@grs grs `ul  1 a 4 2 ]
-[s S948 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+[s S950 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
 "14
-[u S951 . 2 `s 1 i 2 0 `us 1 n 2 0 `S948 1 nAsBytes 2 0 ]
-[v ___flmul@temp temp `S951  1 a 2 11 ]
+[u S953 . 2 `s 1 i 2 0 `us 1 n 2 0 `S950 1 nAsBytes 2 0 ]
+[v ___flmul@temp temp `S953  1 a 2 11 ]
 "10
 [v ___flmul@bexp bexp `uc  1 a 1 6 ]
 "11
@@ -448,13 +495,6 @@ closed 4
 [v ___flge@ff1 ff1 `d  1 p 4 22 ]
 [v ___flge@ff2 ff2 `d  1 p 4 26 ]
 "19
-} 0
-"4 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\fleq.c
-[v ___fleq __fleq `(b  1 e 0 0 ]
-{
-[v ___fleq@ff1 ff1 `d  1 p 4 22 ]
-[v ___fleq@ff2 ff2 `d  1 p 4 26 ]
-"12
 } 0
 "11 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\sprcdiv.c
 [v ___fldiv __fldiv `(d  1 e 4 0 ]
@@ -475,6 +515,15 @@ closed 4
 [v ___fldiv@b b `d  1 p 4 48 ]
 [v ___fldiv@a a `d  1 p 4 52 ]
 "185
+} 0
+"87 F:\Documentos\ws-mplabx\door-controller.X/lcd.h
+[v _LCD_printChar LCD_printChar `(v  1 e 1 0 ]
+{
+[v LCD_printChar@letter letter `uc  1 a 1 wreg ]
+[v LCD_printChar@letter letter `uc  1 a 1 wreg ]
+"89
+[v LCD_printChar@letter letter `uc  1 a 1 22 ]
+"94
 } 0
 "123 F:\Documentos\ws-mplabx\door-controller.X/util.h
 [v _interrupt_service_routine interrupt_service_routine `IIH(v  1 e 1 0 ]

@@ -24,7 +24,7 @@
 
 // CONFIG2H
 #pragma config WDT = ON        // Watchdog Timer Enable bit (WDT disabled (control is placed on the SWDTEN bit))
-#pragma config WDTPS = 8192    // Watchdog Timer Postscale Select bits (1:32768)
+#pragma config WDTPS = 4096    // Watchdog Timer Postscale Select bits (1:32768)
 
 // CONFIG3H
 #pragma config CCP2MX = ON      // CCP2 MUX bit (CCP2 input/output is multiplexed with RC1)
@@ -186,7 +186,7 @@ void doorController_init(void)
    LCD_placeCursorInPosition(0x81);
    LCD_print("Status:", 10);
    LCD_placeCursorInPosition(0xC3);
-   LCD_print("Fechada    ", 10);
+   LCD_print("Fechada    ", 10);   
    doorStatus = closed;
 }
 
@@ -206,7 +206,7 @@ void doorController_openingDoor(void)
 
       LCD_placeCursorInPosition(0xC3);
       LCD_print("Aberta    ", 10);
-
+      
       doorStatus = opened;
    }
    CLRWDT();
@@ -228,7 +228,7 @@ void doorController_closingDoor(void)
 
       LCD_placeCursorInPosition(0xC3);
       LCD_print("Fechada    ", 10);
-
+      
       doorStatus = closed;
    }
    CLRWDT();
