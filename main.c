@@ -10,8 +10,8 @@
  * Projeto Final: Sistema Controlador de Porta
  *
  * Desenvolvido por: Filipe Messias,
- *						   Jeferson Willian Vieira Silva, e
- *							João Vitor Nascimento de Souza.
+ *		     Jeferson Willian Vieira Silva, e
+ *		     João Vitor Nascimento de Souza.
  * Desenvolvido em: 19, 26 e 27 de maio de 2021.
  */
 
